@@ -1,2 +1,4 @@
 git config --get remote.origin.url
 https://github.com/saeedahmed12/V.git
+
+git push --set-upstream origin master

@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Table</title>
+
+    <style>
+        body {
+            margin: 5%
+        }
+
+        table,
+        td {
+            margin: auto;
+            border: 0.5px dotted green;
+            border-collapse: collapse;
+        }
+    </style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script>
+    //jQuery code for clickable dropdown menus.
+    $(document).ready(function () {
+        //Hides all visible dropdown menus.
+        function hideall() {
+            $('nav ul li ul').hide();
+        }
+
+        //When clicking anywhere on the page, hide all dropdown menus.
+        $('html').bind("click touchstart", function () {
+            hideall()
+        });
+
+        //User clicked on a top menu bar item.
+        $('nav ul li').click(function (e) {
+            //Is dropdown already hidden?
+            var hidden = $("ul", this).is(":hidden")
+            //Hide all dropdown menus.
+            hideall()
+            //If it was hidden already, show it.
+            if (hidden) {
+                $("ul", this).slideDown("fast");
+            }
+            //Don't do html.click to hide all menus.
+            e.stopPropagation()
+        });
+
+        $('a').bind("click touchstart", function (e) {
+            e.stopPropagation()
+        });
+    });
+</script>
+<style>
+    /* All elements inside the nav */
+    nav * {
+        margin: 0;
+        padding: 0;
+        font-family: Verdana, Tahoma, Sans-Serif;
+    }
+
+    /* nav element, size and color however you like */
+    nav {
+        height: 48px;
+        line-height: 48px;
+        width: 100%;
+        background-color: #146497;
+        color: White;
+        display: block;
+    }
+
+    /* All link in the nav, size and color how you want */
+    nav a {
+        color: white;
+        text-decoration: none;
+    }
+
+    /* Horizontal menu  */
+    nav ul {
+        margin: 0;
+        list-style-type: none;
+        padding: 0;
+    }
+
+    /* Each item on the top horizontal menu */
+    nav ul li {
+        float: left;
+        position: relative;
+    }
+
+    /* Text on the horzontal menu */
+    nav ul li span,
+    nav ul li a {
+        display: block;
+        height: 100%;
+        padding: 0 20px;
+    }
+
+    /* Dropdown meny styling, style to taste */
+    nav ul ul {
+        margin: 0;
+        padding: 0;
+        display: none;
+        position: absolute;
+        left: 0;
+        width: 300px;
+        background-color: #0c648d;
+        list-style-type: none;
+        z-index: 10;
+    }
+
+    /* Dropdown menu items. */
+    nav ul li ul li {
+        float: left;
+        position: relative;
+        text-align: left;
+    }
+
+    /* Hover color to text across top and items on the dropdown menus */
+    nav li span:hover,
+    nav li a:hover {
+        color: #ff0;
+        cursor: pointer;
+        background-color: #538cb7;
+    }
+
+    /* Hover style for the items on the dropdown menu*/
+    nav ul ul span:hover {
+        text-decoration: underline;
+    }
+
+    nav ul ul li {
+        /* width: 100%; */
+        margin-left: 0px;
+        height: 48px;
+    }
+
+    nav ul ul span,
+    nav ul ul a {
+        display: block;
+        color: #f2f2f2;
+        padding-left: 1em;
+        height: 42px;
+        line-height: 42px;
+        cursor: pointer;
+    }
+
+    nav ul ul span:hover {
+        background-color: #538cb7;
+    }
+</style>
+
+</head>
+
+<body>
+<!-- -----------------------------NAV ----------------------------- -->
+<nav>
+    <ul>
+        <li><a href="https://codepen.io/saeedahmed12/pen/YJVzLe"> FIDDLE</a></li>
+        <li>
+        <li>
+            <span>
+                Links from Alan Simpson
+            </span>
+<ul style="">
+    <li><a href="https://daringfireball.net/projects/markdown/" rel="nofollow" target="_blank">Markdown Home page</a></li>
+    <li><a href="https://daringfireball.net/projects/markdown/syntax" rel="nofollow" target="_blank">Markdown Syntax</a></li>
+    <li><a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet" rel="nofollow" target="_blank">Markdown
+            Cheat Sheet</a></li>
+    <li><a href="https://www.webpagefx.com/tools/emoji-cheat-sheet/" rel="nofollow" target="_blank">Emoji Cheat Sheet</a></li>
+    <li><a href="https://guides.github.com/features/mastering-markdown/" rel="nofollow" target="_blank">GitHub Markdown
+            Guide</a></li>
+    <li><a href="https://github.github.com/gfm/" rel="nofollow" target="_blank">GitHub Flavored Markdown Spec</a></li>
+    <li><a href="http://alansimpson.me/" rel="nofollow" target="_blank">Alan's Website</a></li>
+    <li><a href="https://www.youtube.com/channel/UCnkl2zDeeVZ59Usir8TEP8Q" rel="nofollow" target="_blank">Alan's
+            YouTube Channel</a></li>
+    <li><a href="https://www.facebook.com/groups/LearnHTMLclub" rel="nofollow" target="_blank">Learn HTML Facebook
+            Group</a></li>
+    <li><a href="https://www.facebook.com/groups/WebCodersGroup" rel="nofollow" target="_blank">Web Coders Facebook
+            Group</a></li>
+    <li><a href="http://alansimpson.thinkific.com/courses/find-fabulous-free-public-domain-photos-clipart-and-more" rel="nofollow"
+            target="_blank">Finding Free Public Domain Photos and More</a></li>
+</ul>
+        </li>
+        <li>
+            <span>
+                Top 2
+            </span>
+            <ul>
+                <li><a href="index.html">Drop 2-1 </a></li>
+                <li><a href="index.html">Drop 2-2 </a></li>
+            </ul>
+        </li>
+    </ul>
+</nav>
+
+<!-- -----------------------------NAV END----------------------------- -->
+
+    <h1>Markdown in VS code</h1>
+    <div class="col-xs-12 col-sm-12 col-md-9">
+        <h2 id="overview">Overview<a class="anchorjs-link " href="#overview" aria-label="Anchor link for: overview"
+                data-anchorjs-icon="" style="font: 1em/1 anchorjs-icons; padding-left: 0.375em;"></a></h2>
+
+        <p>This Markdown cheat sheet provides a quick overview of all the Markdown syntax elements. It can’t cover
+            every
+            edge case, so if you need more information about any of these elements, refer to our reference guides for
+            <a href="/basic-syntax">basic syntax</a> and <a href="/extended-syntax">extended syntax</a>.</p>
+
+        <p>HTML code can be used in Markdonw</p>
+
+        <h2 id="basic-syntax">Basic Syntax<a class="anchorjs-link " href="#basic-syntax" aria-label="Anchor link for: basic syntax"
+                data-anchorjs-icon="" style="font: 1em/1 anchorjs-icons; padding-left: 0.375em;"></a></h2>
+
+        <p>These are the elements outlined in John Gruber’s original design document. All Markdown applications support
+            these elements.</p>
+
+        <table class="table table-bordered">
+            <thead class="thead-light">
+                <tr>
+                    <th>Element</th>
+                    <th>Markdown Syntax</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><a href="/basic-syntax/#headings">Heading</a></td>
+                    <td><code># H1<br>
+                            ## H2<br>
+                            ### H3</code></td>
+                </tr>
+                <tr>
+                    <td><a href="/basic-syntax/#bold">Bold</a></td>
+                    <td><code>**bold text**</code></td>
+                </tr>
+                <tr>
+                    <td><a href="/basic-syntax/#italic">Italic</a></td>
+                    <td><code>*italicized text*</code></td>
+                </tr>
+                <tr>
+                    <td><a href="/basic-syntax/#blockquotes-1">Blockquote</a></td>
+                    <td><code>&gt; blockquote</code></td>
+                </tr>
+                <tr>
+                    <td><a href="/basic-syntax/#ordered-lists">Ordered List</a></td>
+                    <td><code>
+                            1. First item<br>
+                            2. Second item<br>
+                            3. Third item<br>
+                        </code></td>
+                </tr>
+                <tr>
+                    <td><a href="/basic-syntax/#unordered-lists">Unordered List</a></td>
+                    <td>
+                        <code>
+                            - First item<br>
+                            - Second item<br>
+                            - Third item<br>
+                        </code>
+                    </td>
+                </tr>
+                <tr>
+                    <td><a href="/basic-syntax/#code">Code</a></td>
+                    <td><code>`code`</code></td>
+                </tr>
+                <tr>
+                    <td><a href="/basic-syntax/#horizontal-rules">Horizontal Rule</a></td>
+                    <td><code>---</code></td>
+                </tr>
+                <tr>
+                    <td><a href="/basic-syntax/#links">Link</a></td>
+                    <td><code>[title](https://www.example.com)<br> </code><br>
+                        with the pasteURL extension: <br>
+                        1. copy url<br>
+                        2. click where you want to put link <br>
+                        3. right click and use 'toggle hyperlink' <br>
+                    </td>
+                </tr>
+                <tr>
+                    <td><a href="/basic-syntax/#images-1">Image</a></td>
+                    <td><code>![alt text](image.jpg)</code></td>
+                </tr>
+                <tr>
+                    <td>Link in Image</a></td>
+                    <td><img src="https://i.imgur.com/dMe0ffg.png" width=300 alt=""></td>
+                </tr>
+            </tbody>
+        </table>
+
+
+        <!-- ------------------------------------------EXTENDED------------------------------ -->
+
+        <h2 id="extended-syntax">Extended Syntax<a class="anchorjs-link " href="#extended-syntax" aria-label="Anchor link for: extended syntax"
+                data-anchorjs-icon="" style="font: 1em/1 anchorjs-icons; padding-left: 0.375em;"></a></h2>
+
+        <p>These elements extend the basic syntax by adding additional features. Not all Markdown applications support
+            these elements.</p>
+
+        <table class="table table-bordered">
+            <thead class="thead-light">
+                <tr>
+                    <th>Element</th>
+                    <th>Markdown Syntax</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><a href="/extended-syntax/#tables">Table</a></td>
+                    <td><code>
+                            | Syntax | Description |<br>
+                            | ----------- | ----------- |<br>
+                            | Header | Title |<br>
+                            | Paragraph | Text |
+                        </code><br><br>
+                        A quick way to is to copy from excel and then use "add table with header"<br>
+                        Align usign ":" at beginning, middle, or end of row <br><br>
+                        There is also a "copy markdown as html" extension</td>
+                </tr>
+                <tr>
+                    <td><a href="/extended-syntax/#fenced-code-blocks">Fenced Code Block</a></td>
+                    <td><code>```<br>
+                            {<br>
+                            &nbsp;&nbsp;"firstName": "John",<br>
+                            &nbsp;&nbsp;"lastName": "Smith",<br>
+                            &nbsp;&nbsp;"age": 25<br>
+                            }<br>
+                            ```
+                        </code></td>
+                </tr>
+                <tr>
+                    <td><a href="/extended-syntax/#footnotes">Footnote</a></td>
+                    <td><code>
+                            Here's a sentence with a footnote. [^1]<br><br>
+
+                            [^1]: This is the footnote.
+                        </code></td>
+                </tr>
+                <tr>
+                    <td><a href="/extended-syntax/#heading-ids">Heading ID</a></td>
+                    <td><code>### My Great Heading {#custom-id}</code></td>
+                </tr>
+                <tr>
+                    <td><a href="/extended-syntax/#definition-lists">Definition List</a></td>
+                    <td><code>
+                            term<br>
+                            : definition
+                        </code></td>
+                </tr>
+                <tr>
+                    <td><a href="/extended-syntax/#strikethrough">Strikethrough</a></td>
+                    <td><code>~~The world is flat.~~</code></td>
+                </tr>
+                <tr>
+                    <td><a href="/extended-syntax/#task-lists">Task List</a></td>
+                    <td><code>
+                            - [x] Write the press release<br>
+                            - [ ] Update the website<br>
+                            - [ ] Contact the media
+                        </code></td>
+                </tr>
+            </tbody>
+        </table>
+
+
+    </div>
+
+</body>
+
+</html>

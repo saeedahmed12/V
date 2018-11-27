@@ -137,31 +137,43 @@
         nav ul ul span:hover {
             background-color: #538cb7;
         }
-    </style>
 
+        .hide {
+            display: none;
+        }
+    </style>
+    <script>
+        function myFunction() {
+            var element = document.getElementById("SourceFile");
+            element.classList.toggle("hide");
+        }
+    </script>
 
 </head>
 
 <body style="margin: 5%">
 
-<!-- ====================================================================================== Horizontal menu bar -->
-<nav>
-    <ul>
-<li><a href="https://codepen.io/saeedahmed12/pen/YJVzLe"> FIDDLE</a></li>
-        <li>
-            <span>
-                Source File
-            </span>
-            <ul>
-                <li><a href="#" onclick="window.open('file:///C:/Users/Ahmed/OneDrive/Documents/for%20online%20content/forProgmWebsites/GitVs/test.html'); return false">Source file</a></li>
-            </ul>
-        </li>
-        <li>
-<a href="https://saeedahmed12.github.io/V/MarkdownTable.html">Markdown Ref</a>
-        </li>
-    </ul>
-</nav>
-<!-- ====================================================================================== END Horizontal menu bar -- -->
+    <p id="SourceFile" class="hide">C:\Users\Ahmed\OneDrive\Documents\for online
+        content\forProgmWebsites\GitVs\test.html</p>
+    <!-- To toggle source file: 1) add p, 2) add style, 3) add function in script, 4) add event to navbar -->
+
+
+    <!-- ====================================================================================== Horizontal menu bar -->
+    <nav>
+        <ul>
+            <li><a href="https://codepen.io/saeedahmed12/pen/YJVzLe"> FIDDLE</a></li>
+            <li>
+                <span>
+                    Source File
+                </span>
+                <ul>
+                    <li><a href="#" onclick="myFunction()">Show/Hide</a></li>
+                </ul>
+            </li>
+            <li><a href="https://saeedahmed12.github.io/V/MarkdownTable.html">Markdown Ref</a></li>
+        </ul>
+    </nav>
+    <!-- ====================================================================================== END Horizontal menu bar -- -->
 
     <h1>MS Visual Studio Code</h1>
 
@@ -186,11 +198,12 @@ For 'Markdown Shortcuts', copygithub un and pw to settings
 
     <hr>
     <div>
-        <h3>use with python</h3> (<a href="https://code.visualstudio.com/docs/python/python-tutorial">link to official docs)</a>
+        <h3>use with python</h3> (<a href="https://code.visualstudio.com/docs/python/python-tutorial">link to official
+            docs)</a>
         <ul>
             <li>navigate to particular folder using terminal</li>
-            <li>start VS code there by typing-  code .</li>
-            <li>select python interpreter using command palette and typing-   Python: Select Interpreter </li>
+            <li>start VS code there by typing- code .</li>
+            <li>select python interpreter using command palette and typing- Python: Select Interpreter </li>
             <li>create python file</li>
 
             <li>
@@ -202,8 +215,9 @@ For 'Markdown Shortcuts', copygithub un and pw to settings
             <li>Settings: workplace -> python path</li>
             <li>Debugger: Configurations -(use gear icon) - "python current file (integrated terminal)"</li>
         </ul>
-    
-    </div><hr>
+
+    </div>
+    <hr>
 
     <div>
         <h3>Use for Markdown</h3>
@@ -228,5 +242,3 @@ For 'Markdown Shortcuts', copygithub un and pw to settings
 
 
 </html>
-
-

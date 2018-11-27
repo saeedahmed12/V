@@ -19,187 +19,215 @@
             border-collapse: collapse;
         }
     </style>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-<script>
-    //jQuery code for clickable dropdown menus.
-    $(document).ready(function () {
-        //Hides all visible dropdown menus.
-        function hideall() {
-            $('nav ul li ul').hide();
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script>
+        //jQuery code for clickable dropdown menus.
+        $(document).ready(function () {
+            //Hides all visible dropdown menus.
+            function hideall() {
+                $('nav ul li ul').hide();
+            }
+
+            //When clicking anywhere on the page, hide all dropdown menus.
+            $('html').bind("click touchstart", function () {
+                hideall()
+            });
+
+            //User clicked on a top menu bar item.
+            $('nav ul li').click(function (e) {
+                //Is dropdown already hidden?
+                var hidden = $("ul", this).is(":hidden")
+                //Hide all dropdown menus.
+                hideall()
+                //If it was hidden already, show it.
+                if (hidden) {
+                    $("ul", this).slideDown("fast");
+                }
+                //Don't do html.click to hide all menus.
+                e.stopPropagation()
+            });
+
+            $('a').bind("click touchstart", function (e) {
+                e.stopPropagation()
+            });
+        });
+    </script>
+    <style>
+        /* All elements inside the nav */
+        nav * {
+            margin: 0;
+            padding: 0;
+            font-family: Verdana, Tahoma, Sans-Serif;
         }
 
-        //When clicking anywhere on the page, hide all dropdown menus.
-        $('html').bind("click touchstart", function () {
-            hideall()
-        });
+        /* nav element, size and color however you like */
+        nav {
+            height: 48px;
+            line-height: 48px;
+            width: 100%;
+            background-color: #146497;
+            color: White;
+            display: block;
+        }
 
-        //User clicked on a top menu bar item.
-        $('nav ul li').click(function (e) {
-            //Is dropdown already hidden?
-            var hidden = $("ul", this).is(":hidden")
-            //Hide all dropdown menus.
-            hideall()
-            //If it was hidden already, show it.
-            if (hidden) {
-                $("ul", this).slideDown("fast");
-            }
-            //Don't do html.click to hide all menus.
-            e.stopPropagation()
-        });
+        /* All link in the nav, size and color how you want */
+        nav a {
+            color: white;
+            text-decoration: none;
+        }
 
-        $('a').bind("click touchstart", function (e) {
-            e.stopPropagation()
-        });
-    });
-</script>
-<style>
-    /* All elements inside the nav */
-    nav * {
-        margin: 0;
-        padding: 0;
-        font-family: Verdana, Tahoma, Sans-Serif;
-    }
+        /* Horizontal menu  */
+        nav ul {
+            margin: 0;
+            list-style-type: none;
+            padding: 0;
+        }
 
-    /* nav element, size and color however you like */
-    nav {
-        height: 48px;
-        line-height: 48px;
-        width: 100%;
-        background-color: #146497;
-        color: White;
-        display: block;
-    }
+        /* Each item on the top horizontal menu */
+        nav ul li {
+            float: left;
+            position: relative;
+        }
 
-    /* All link in the nav, size and color how you want */
-    nav a {
-        color: white;
-        text-decoration: none;
-    }
+        /* Text on the horzontal menu */
+        nav ul li span,
+        nav ul li a {
+            display: block;
+            height: 100%;
+            padding: 0 20px;
+        }
 
-    /* Horizontal menu  */
-    nav ul {
-        margin: 0;
-        list-style-type: none;
-        padding: 0;
-    }
+        /* Dropdown meny styling, style to taste */
+        nav ul ul {
+            margin: 0;
+            padding: 0;
+            display: none;
+            position: absolute;
+            left: 0;
+            width: 300px;
+            background-color: #0c648d;
+            list-style-type: none;
+            z-index: 10;
+        }
 
-    /* Each item on the top horizontal menu */
-    nav ul li {
-        float: left;
-        position: relative;
-    }
+        /* Dropdown menu items. */
+        nav ul li ul li {
+            float: left;
+            position: relative;
+            text-align: left;
+        }
 
-    /* Text on the horzontal menu */
-    nav ul li span,
-    nav ul li a {
-        display: block;
-        height: 100%;
-        padding: 0 20px;
-    }
+        /* Hover color to text across top and items on the dropdown menus */
+        nav li span:hover,
+        nav li a:hover {
+            color: #ff0;
+            cursor: pointer;
+            background-color: #538cb7;
+        }
 
-    /* Dropdown meny styling, style to taste */
-    nav ul ul {
-        margin: 0;
-        padding: 0;
-        display: none;
-        position: absolute;
-        left: 0;
-        width: 300px;
-        background-color: #0c648d;
-        list-style-type: none;
-        z-index: 10;
-    }
+        /* Hover style for the items on the dropdown menu*/
+        nav ul ul span:hover {
+            text-decoration: underline;
+        }
 
-    /* Dropdown menu items. */
-    nav ul li ul li {
-        float: left;
-        position: relative;
-        text-align: left;
-    }
+        nav ul ul li {
+            /* width: 100%; */
+            margin-left: 0px;
+            height: 48px;
+        }
 
-    /* Hover color to text across top and items on the dropdown menus */
-    nav li span:hover,
-    nav li a:hover {
-        color: #ff0;
-        cursor: pointer;
-        background-color: #538cb7;
-    }
+        nav ul ul span,
+        nav ul ul a {
+            display: block;
+            color: #f2f2f2;
+            padding-left: 1em;
+            height: 42px;
+            line-height: 42px;
+            cursor: pointer;
+        }
 
-    /* Hover style for the items on the dropdown menu*/
-    nav ul ul span:hover {
-        text-decoration: underline;
-    }
+        nav ul ul span:hover {
+            background-color: #538cb7;
+        }
 
-    nav ul ul li {
-        /* width: 100%; */
-        margin-left: 0px;
-        height: 48px;
-    }
+        .hide {
+            display: none;
+        }
+    </style>
 
-    nav ul ul span,
-    nav ul ul a {
-        display: block;
-        color: #f2f2f2;
-        padding-left: 1em;
-        height: 42px;
-        line-height: 42px;
-        cursor: pointer;
-    }
-
-    nav ul ul span:hover {
-        background-color: #538cb7;
-    }
-</style>
+    <script>
+        function myFunction() {
+            var element = document.getElementById("SourceFile");
+            element.classList.toggle("hide");
+        }
+    </script>
 
 </head>
 
 <body>
-<!-- -----------------------------NAV ----------------------------- -->
-<nav>
-    <ul>
-        <li><a href="https://codepen.io/saeedahmed12/pen/YJVzLe"> FIDDLE</a></li>
-        <li><a href="#" onclick="window.open('file:///C:/Users/Ahmed/OneDrive/Documents/for%20online%20content/forProgmWebsites/GitVs/MarkdownTable.html'); return false">Source
-        file</a></li>
-<li><a href="https://saeedahmed12.github.io/V/test.html" target="_blank">VS code Ref</a></li>
-        <li>
-            <span>
-                Links from Alan Simpson
-            </span>
-            <ul>
-                <li><a href="https://daringfireball.net/projects/markdown/" rel="nofollow" target="_blank">Markdown
-                        Home page</a></li>
-                <li><a href="https://daringfireball.net/projects/markdown/syntax" rel="nofollow" target="_blank">Markdown
-                        Syntax</a></li>
-                <li><a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet" rel="nofollow" target="_blank">Markdown
-                        Cheat Sheet</a></li>
-                <li><a href="https://www.webpagefx.com/tools/emoji-cheat-sheet/" rel="nofollow" target="_blank">Emoji
-                        Cheat Sheet</a></li>
-                <li><a href="https://guides.github.com/features/mastering-markdown/" rel="nofollow" target="_blank">GitHub
-                        Markdown
-                        Guide</a></li>
-                <li><a href="https://github.github.com/gfm/" rel="nofollow" target="_blank">GitHub Flavored Markdown
-                        Spec</a></li>
-                <li><a href="http://alansimpson.me/" rel="nofollow" target="_blank">Alan's Website</a></li>
-                <li><a href="https://www.youtube.com/channel/UCnkl2zDeeVZ59Usir8TEP8Q" rel="nofollow" target="_blank">Alan's
-                        YouTube Channel</a></li>
-                <li><a href="https://www.facebook.com/groups/LearnHTMLclub" rel="nofollow" target="_blank">Learn HTML
-                        Facebook
-                        Group</a></li>
-                <li><a href="https://www.facebook.com/groups/WebCodersGroup" rel="nofollow" target="_blank">Web Coders
-                        Facebook
-                        Group</a></li>
-                <li><a href="http://alansimpson.thinkific.com/courses/find-fabulous-free-public-domain-photos-clipart-and-more"
-                        rel="nofollow" target="_blank">Finding Free Public Domain Photos and More</a></li>
+    <p id="SourceFile" class="hide">C:\Users\Ahmed\OneDrive\Documents\for online
+        content\forProgmWebsites\GitVs\MarkdownTable.html</p>
 
-                <li>
-                    <a href="https://saeedahmed12.github.io/V/test.html">VS code Ref</a>
-                </li>
-            </ul>
-        </li>
-    </ul>
-</nav>
+    <!-- To toggle source file: 1) add p, 2) add style, 3) add function in script, 4) add event to navbar -->
 
-<!-- -----------------------------NAV END----------------------------- -->
+
+
+    <!-- -----------------------------NAV ----------------------------- -->
+    <nav>
+        <ul>
+            <li><a href="https://codepen.io/saeedahmed12/pen/YJVzLe"> FIDDLE</a></li>
+            <li>
+                <span>
+                    Source File
+                </span>
+                <ul>
+                    <li><a href="#" onclick="myFunction()">Show/Hide</a></li>
+                </ul>
+            </li>
+            <li><a href="https://saeedahmed12.github.io/V/test.html" target="_blank">VS code Ref</a></li>
+            <li>
+                <span>
+                    Links from Alan Simpson
+                </span>
+                <ul>
+                    <li><a href="https://daringfireball.net/projects/markdown/" rel="nofollow" target="_blank">Markdown
+                            Home page</a></li>
+                    <li><a href="https://daringfireball.net/projects/markdown/syntax" rel="nofollow" target="_blank">Markdown
+                            Syntax</a></li>
+                    <li><a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet" rel="nofollow"
+                            target="_blank">Markdown
+                            Cheat Sheet</a></li>
+                    <li><a href="https://www.webpagefx.com/tools/emoji-cheat-sheet/" rel="nofollow" target="_blank">Emoji
+                            Cheat Sheet</a></li>
+                    <li><a href="https://guides.github.com/features/mastering-markdown/" rel="nofollow" target="_blank">GitHub
+                            Markdown
+                            Guide</a></li>
+                    <li><a href="https://github.github.com/gfm/" rel="nofollow" target="_blank">GitHub Flavored
+                            Markdown
+                            Spec</a></li>
+                    <li><a href="http://alansimpson.me/" rel="nofollow" target="_blank">Alan's Website</a></li>
+                    <li><a href="https://www.youtube.com/channel/UCnkl2zDeeVZ59Usir8TEP8Q" rel="nofollow" target="_blank">Alan's
+                            YouTube Channel</a></li>
+                    <li><a href="https://www.facebook.com/groups/LearnHTMLclub" rel="nofollow" target="_blank">Learn
+                            HTML
+                            Facebook
+                            Group</a></li>
+                    <li><a href="https://www.facebook.com/groups/WebCodersGroup" rel="nofollow" target="_blank">Web
+                            Coders
+                            Facebook
+                            Group</a></li>
+                    <li><a href="http://alansimpson.thinkific.com/courses/find-fabulous-free-public-domain-photos-clipart-and-more"
+                            rel="nofollow" target="_blank">Finding Free Public Domain Photos and More</a></li>
+
+                    <li>
+                        <a href="https://saeedahmed12.github.io/V/test.html">VS code Ref</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- -----------------------------NAV END----------------------------- -->
 
     <h1>Markdown in VS code</h1>
     <div class="col-xs-12 col-sm-12 col-md-9">

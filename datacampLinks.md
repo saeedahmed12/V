@@ -1,54 +1,4 @@
 
-
-
-
-[Data Structures](#dataStructures)
-- [Series](#series)
-- [DataFrames](#dataframes)  
-
-[Hierarchical Indexing](#hierarchicalIndexing)
-
-
-<a id="dataframes">
-
-<a id="hierarchicalIndexing">
-
-<hr>
-
-[interactive cheatsheet](https://htmlcheatsheet.com/jquery/)
-
-
-* [Arrays](#arrays)
-* [Built-in Methods](#builtin)
-* [Attributes](#attributes)
-* [Indexing](#indexing)
-* [Fancy Indexing](#fancy)
-* [Assigning New Values](#new)
-* [Slicing](#slicing)
-* [Broadcasting](#broadcasting)
-* [Boolean Masking](#boolean)
-* [Arithmetic Operations and Universal Functions](#Universal)
-* [Coercion](#coercion)
-
-
-
-<a id="arrays">
-<a id="builtin">
-<a id="attributes">
-<a id="indexing">
-<a id="fancy">
-<a id="new">
-<a id="slicing">
-<a id="broadcasting">
-<a id="boolean">
-<a id="Universal">
-
-<a id="coercion">
-
-
-
-
-
 [Numpy](https://campus.datacamp.com/courses/intro-to-python-for-data-science/chapter-4-numpy?ex=1)  
 [Mathplotlib](https://campus.datacamp.com/courses/intermediate-python-for-data-science/matplotlib?ex=1)  
 [Functions](https://www.datacamp.com/courses/python-data-science-toolbox-part-1)  
@@ -59,11 +9,5 @@
 [Pandas Intro](https://www.datacamp.com/courses/pandas-foundations)
 [manipulating with pandas ](https://www.datacamp.com/courses/manipulating-dataframes-with-pandas)  
 [merging with pandas](https://www.datacamp.com/courses/merging-dataframes-with-pandas)  
-
-
-
-
-
-
 
 

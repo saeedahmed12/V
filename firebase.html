@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Vue and Firebase</title>
+        <style>
+            img {
+                width: 40%;
+                border: 0.5px solid blue
+            }
+        </style>
+    </head>
+
+    <body>
+        <h1>Firebase</h1>
+
+        <h2>Free tools</h2>
+        <div>
+            <ol>
+                <li>Node: to check if installed, go to cmd (run as administrator) and type: <code>node -v</code>. If not
+                    install nodejs for 'most users' <br>
+                Node comes with 'node package manager'(NPM): <code>npm -v</code></li>
+    
+                <br>
+                <li>Firebase: <code>npm install -g firebase-tools</code> </li>
+                <br>
+                <li>Vue: <code>npm install -g vue-cli</code></li>
+            </ol>
+        </div>
+
+        <h2>Set up of database and hosting App</h2>
+        <h3>Setting up database on firebase</h3>
+        <ul>
+            <li>Go to firebase.google.com</li>
+            <li>Add project: 1) Name (google makes project id for it)</li>
+            <li>There are several available things; in this case we'll use 'hosting' and 'database' (both under "Develop")</li>
+            <li>Choose "real time database"</li>
+            <li>Change 'rules' as needed (usually to allow read but not write), and return to data</li>
+        </ul>
+
+        <h3>Getting data ready</h3>
+        <ul>
+            <li>With a CSV file with first row as headers, row unique IDs (as keys), covert to 'keyed JSON' (using an
+                online <a href="http://www.convertcsv.com/csv-to-json.htm">converter</a> </li>
+            <li>Use an editor to enclosed data in a curly braces and give it a name. <br>
+                <img src="https://i.imgur.com/9meUx84.png" alt=""><img src="https://i.imgur.com/QREIpBo.png" alt=""></li>
+        </ul>
+
+        <h3>Moving data to firebase DATABASE</h3>
+        <ul>
+            <li>import the keyed JSON file into the firebase database that was created</li>
+        </ul>
+        
+        
+        <h3>Prepare and Export webapp to firebase HOSTING</h3>
+        <ul>
+        <h4>Initialize the vue webpack</h4>
+            <li>Go to command prompt (as admin), navigate to folder where you want project to reside and type <code>vue init
+                webpack collex</code>, then the following (including the yellow ones)<br>
+            <img src="https://i.imgur.com/LFZtnil.png" alt=""></li></h4>
+            <li><code>npm run dev</code> sets up a local server</li>
+            <li>this is the result:
+            <br><img src="https://i.imgur.com/q3gni2W.png" alt=""></li>
+        <h4>Install firebase vuefire and work on 'main.JS', 'index.html, and 'App.vue'</h4>
+            <li>then hit ctrl-c and then 'y', and then type <code>npm install firebase vuefire --save</code></li>
+            <li>then type <code>npm run dev</code> again</li>
+            <li>Open up VS code and open project folder
+            <br><img src="https://i.imgur.com/J0VuvQp.png" alt=""></li>
+            <li>open terminal and run 'npm run dev'
+            <br><img src="https://i.imgur.com/XBkVFIV.png" alt=""></li>
+            <li>change description in index.html if needed</li>
+            <li>in App.vue, remove template text, helloworld script, and export default
+            <br><img src="https://i.imgur.com/WR44GqV.png" alt=""></li>
+            <li>html window should now be blank</li> 
+            <li>Now go to firebase in project and find this icon at 'get started' area</li>
+            <br><img src="https://i.imgur.com/9bp7uon.png" alt="">
+            <img src="https://i.imgur.com/jLU8rmn.png" alt=""></li>
+            <li>Add this code in appropriate place in all spots in App.vue, and make other changes per Alan Simpson's sample <a href="https://1drv.ms/f/s!Aga_4YO2d91ug8t3yfUMH_R4yX3nmQ">code in the 'src' folder</a></li> </ul>
+
+        <h3>Final Steps</h3>
+        <ul>
+            <li>run 'npm run dev' to ensure everything is working properly</li>
+            <li>close the local server</li>
+            <li>now type <code>npm run build</code></li>
+
+            <li>see this <a href="https://www.udemy.com/beginner-firebase-and-vuejs/learn/v4/t/lecture/9413288?start=0">VIDEO</a></li>
+            <li>after run build, there is a new folder called 'dist' that has the code that will be published</li>
+            <li><code>firebase init</code><br>
+            <img src="https://i.imgur.com/SU90LaQ.png" alt=""><br>
+            <img src="https://i.imgur.com/tlmVJKY.png" alt=""><br>
+            <img src="https://i.imgur.com/ddxiz2x.png" alt=""><br>
+            <img src="https://i.imgur.com/dkg8zIf.png" alt=""><br>
+            <img src="https://i.imgur.com/sA7nvrg.png" alt=""><br>
+            <img src="" alt="">
+            </li>
+            <li>ctrl-c to get out of firebase server</li>
+            <li><code>firebase deploy</code></li>
+
+
+            <PRE>
+
+            </PRE>
+
+        </ul>
+
+            <h2>To add to existing database</h2>
+            <pre>
+                -------------------------------Adding stuff to existing firebase database- collex-c5f71-------------------------
+                In csv give new category id to use in different webpages
+                
+                
+                Add stuff at the bottom
+                http://www.convertcsv.com/csv-to-json.htm -> keyed json
+                fix the json file by adding node, "item": {...}
+                upload to firebase
+                GO TO collex/collex within terminal
+                npm run build
+                firebase deploy
+                
+                https://collex-c5f71.firebaseapp.com/?id=2
+                check json rules (if data not showing up)
+                
+                
+                https://www.udemy.com/beginner-firebase-and-vuejs/learn/v4/t/lecture/9417456?start=0
+                alan simpson udemy firebase course
+            </pre>
+            
+
+        </ul>
+
+        <div>
+            <h2>references</h2>
+            <ul>
+                <li>
+                    <a href="https://www.udemy.com/beginner-firebase-and-vuejs/learn/v4/t/lecture/9407348?start=0">udemy course</a>
+                </li>
+                <li></li>
+            </ul>
+        </div>
+
+
+    </body>
+
+</html>

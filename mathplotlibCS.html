@@ -219,8 +219,20 @@
                         </td>
                     </tr>
                     <tr>
-                        <td>Row 2, Cell 1</td>
-                        <td>Row 2, Cell 2</td>
+                        <td><code>
+                            plt.axes([.05,.05,.425,0.9]) #manually set coordinates <br><br>
+
+                            #plt.subplot(m, n, k)] row,col,index starting from 1, increasing to right <br>
+                            plt.subplot(1,2,1)br  <br>
+                            plt.subplot(1,2,2)br  <br>
+                        </code></td>
+                        <td>
+                            plot: [xlo, ylo, wid,ht], also has **kwargs <br><br>
+
+                            subplot uses automatic spacing based on grid of plots <br>
+                            top-left plot <br>
+                            top-right plot <br>
+                        </td>
                     </tr>
                 </tbody>
             </table>
@@ -235,15 +247,13 @@
 
                                 plt.xlabel('GDP per Capita [in USD]') <br>
                                 plt.ylabel('Life Expectancy [in years]') <br>
-                                plt.title('World Development in 2007') <br><br>
+                                plt.title('Degrees awarded to women (1990-2010)\nComputer Science (red)')  <br><br>
 
                                 plt.scatter(x = gdp_cap, y = life_exp, s = np.array(pop) * 2, c= col, alpha=0.8)
                                 <br><br>
                                 plt.grid(True) <br>
+                                plt.grid(which='minor', color='r', linestyle='--') <br>
                                 plt.text(155,70, 'text') <br><br>
-
-                                plt.xlim(-10, 10) <br>
-                                plt.ylim(-10,10) <br>
                             </code>
                         </td>
                         <td>
@@ -256,14 +266,20 @@
                             Size, color, opacity of markers based on list/np.arrays, and value (0 to 1), respectively
                             <br><br>
                             add grid <br>
+                            add a minor grid according to specs <br>
                             add text at x,y coordinates <br><br>
 
-                            x limits <br>
-                            y limits <br>
+
                         </td>
                     </tr>
                     <tr>
                         <td>
+                            <code>
+                            plt.xlim(-10, 10) <br>
+                            plt.ylim(-10,10) <br>
+                            #axis([xmin,xmax,ymin,ymax]) <br>
+                            #axis(**kwargs) #'on', 'off', 'equal', 'square', 'auto'..</code>
+                            <br> <br>
                             <pre class="code" style="color: #e83e8c">plt.tick_params(
     axis='x',               # changes apply to the x-axis
     which='major',          # both major and minor ticks are affected
@@ -272,13 +288,19 @@
     labelbottom=True)       # labels along the bottom edge are off</pre>
                             <code>
                                 plt.minorticks_on()  #[off] <br>
-plt.tick_params(axis='x',which='minor',bottom='off') <br><br>
+                                plt.tick_params(axis='x',which='minor',bottom='off') <br><br>
                                 tick_val = [1000, 10000,100000] <br>
                                 tick_lab = ['1k', '10k', '100k'] <br>
                                 plt.xticks(tick_val,tick_lab) <br>
                             </code>
                         </td>
-                        <td>Customize ticks <br><br><br><br><br><br>
+                        <td>
+                                x limits <br>
+                                y limits <br>
+                                using axis command with x,y limits <br>
+                                using axis command with **kwarg options <br><br>
+
+                                Customize ticks <br><br><br><br><br><br>
                                 minor ticks <br><br><br>
                                 list of tick values <br>
                                 list of labels for ticks <br>
@@ -287,7 +309,45 @@ plt.tick_params(axis='x',which='minor',bottom='off') <br><br>
                 </tbody>
             </table>
             <li>Save Plot</li>
+                <table class="customTable">
+                    <tbody>
+                        <tr>
+                            <td>
+                                <code>
+                                    plt.savefig('xlim_and_ylim.png')
+                                </code>
+                            </td>
+                            <td>
+                                    save plot to a named png file
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Row 2, Cell 1</td>
+                            <td>Row 2, Cell 2</td>
+                        </tr>
+                    </tbody>
+                </table>
             <li>Show Plot</li>
+                <table class="customTable">
+                    <tbody>
+                        <tr>
+                            <td>
+                                <code>
+                                plt.tight_layout() <br>
+                                plt.show() <br>
+                                </code>
+                            </td>
+                            <td>
+                                when using multiple plots, improves spacing <br>
+                                show the plot after other settings have been entered <br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Row 2, Cell 1</td>
+                            <td>Row 2, Cell 2</td>
+                        </tr>
+                    </tbody>
+                </table>
         </ol>
     </div>
 

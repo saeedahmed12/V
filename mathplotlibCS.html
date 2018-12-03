@@ -209,11 +209,13 @@
                     <tr>
                         <td>
                             <code>
+                                plt.plot(year, computer_science, marker = 'o', color='red', label='Computer Science') <br>
                                 plt.hist(x) <br>
                                 plt.scatter(x,y)
                             </code>
                         </td>
                         <td>
+                            plot with some customizations <br>
                             histogram plot <br>
                             scatter plot
                         </td>
@@ -247,7 +249,12 @@
 
                                 plt.xlabel('GDP per Capita [in USD]') <br>
                                 plt.ylabel('Life Expectancy [in years]') <br>
-                                plt.title('Degrees awarded to women (1990-2010)\nComputer Science (red)')  <br><br>
+                                plt.title('Degrees awarded to women (1990-2010)\nComputer Science (red)') <br>
+                                plt.legend(loc='lower center') <br>
+                                plt.annotate('blahblah', xy = (5.0, 3.5)) <br><br>
+                                cs_max = computer_science.max() <br>
+                                yr_max = year[computer_science.argmax()] <br>
+                                plt.annotate('Maximum', xy = (yr_max,cs_max), xytext=(yr_max+5, cs_max+5), arrowprops={"facecolor":"black"}) <br><br>
 
                                 plt.scatter(x = gdp_cap, y = life_exp, s = np.array(pop) * 2, c= col, alpha=0.8)
                                 <br><br>
@@ -261,7 +268,12 @@
 
                             x scale label <br>
                             y scale label <br>
-                            plot title <br><br>
+                            plot title <br>    
+                            legend <a href="https://i.imgur.com/acypk7P.png">(locations)</a> <br>  
+                            annotations: put text in quotes at 5,3.5 <br><br>
+                            cs_max is max of a list/array<br>
+                            this uses index of one list to match the x coordinate of other array<br>
+                            put in text and arrow<br><br>
 
                             Size, color, opacity of markers based on list/np.arrays, and value (0 to 1), respectively
                             <br><br>
@@ -292,6 +304,7 @@
                                 tick_val = [1000, 10000,100000] <br>
                                 tick_lab = ['1k', '10k', '100k'] <br>
                                 plt.xticks(tick_val,tick_lab) <br>
+                                plt.xticks(rotation=55)
                             </code>
                         </td>
                         <td>
@@ -304,7 +317,9 @@
                                 minor ticks <br><br><br>
                                 list of tick values <br>
                                 list of labels for ticks <br>
-                                put the ticks/labels on plot</td>
+                                put the ticks/labels on plot <br>  
+                                rotate x-tick direction
+                            </td>
                     </tr>
                 </tbody>
             </table>
@@ -349,6 +364,58 @@
                     </tbody>
                 </table>
         </ol>
+
+        <script>
+            function myFunction() {
+                var x = document.getElementById("myDIV");
+                if (x.style.display === "none") {
+                    x.style.display = "block";
+                } else {
+                    x.style.display = "none";
+                }
+            }
+        </script>
+
+            <button  style="background-color: darkturquoise"   onclick="myFunction()">Example of subplot, style, tick rotation, annotations in one plot</button>
+
+            <div id="myDIV">
+                <pre class="code">
+# Import matplotlib.pyplot
+import matplotlib.pyplot as plt, numpy as np
+
+# Set the style to 'ggplot'
+# plt.style.use('fivethirtyeight')
+plt.style.use('ggplot')
+
+year = [1970, 1971, 1972, 1973, 1974, 1975, 1976, 1977, 1978, 1979, 1980, 1981, 1982, 1983, 1984, 1985, 1986, 1987,
+1988, 1989, 1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007,
+2008, 2009, 2010, 2011]
+
+computer_science = [13.6, 13.6, 14.9, 16.4, 18.9, 19.8, 23.9, 25.7, 28.1, 30.2, 32.5, 34.8, 36.3, 37.1, 36.8, 35.7,
+34.7, 32.4, 30.8, 29.9, 29.4, 28.7, 28.2, 28.5, 28.5, 27.5, 27.1, 26.8, 27.0, 28.1, 27.7, 27.6, 27.0, 25.1, 22.2, 20.6,
+18.6, 17.6, 17.8, 18.1, 17.6, 18.2]
+
+year = np.array(year)
+computer_science = np.array(computer_science)
+
+# Plot the enrollment % of women in Computer Science
+plt.subplot(2, 2, 2)
+plt.plot(year, computer_science, color='red')
+plt.title('Computer Science')
+plt.xticks(rotation=55)
+tick_val = [1970 ,1983, 1990, 2010]
+plt.xticks(tick_val)
+
+# Add annotation
+cs_max = computer_science.max()
+yr_max = year[computer_science.argmax()]
+plt.annotate('Maximum', xy=(yr_max, cs_max), xytext=(yr_max-1, cs_max-10), arrowprops=dict(facecolor='black'))
+
+plt.show()
+
+
+                </pre>
+            </div>
     </div>
 
     <!-- Optional JavaScript -->

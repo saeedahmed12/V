@@ -10,32 +10,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 
-    <style>
-        .card-text {
-            margin-left: 5px;
-        }
-
-        .card {
-            background-color: #faf9f9;
-            margin: 5px;
-        }
-
-        body {
-            background-color: #607381;
-            margin-top: 100px;
-            margin-bottom: 100px
-        }
-
-        button {
-            width: 48%;
-            box-shadow: 10px 10px 5px #2d3e4b;
-            padding: 5px;
-            margin: 5px;
-            border: 0;
-            outline: 0 !important 
-        }
-
-    </style>
 
     <base target="_blank">
 
@@ -131,6 +105,29 @@
     </script>
 
     <style>
+
+            .card-text {
+            margin-left: 5px;
+            }
+
+            .card {
+            background-color: #faf9f9;
+            margin: 5px;
+            }
+
+            body {
+            background-color: #607381;
+            margin-bottom: 100px
+            }
+
+            button {
+            width: 48%;
+            box-shadow: 10px 10px 5px #2d3e4b;
+            padding: 5px;
+            margin: 5px;
+            border: 0;
+            outline: 0 !important
+                }
         .card {
             display: none;
             box-shadow: 10px 10px 5px #2d3e4b;
@@ -154,9 +151,34 @@ box-shadow: 5px 5px 5px #2d3e4b;
 
 <body>
 
+    <!-- navbar start----------------------------------------------- -->
+
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        Dropdown links
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="https://www.youtube.com/watch?v=8BXDe5fcp7I&list=PLzEc6OvKGFVjURUeEDLNswXK0q3bapBGM">Robin McKenzie playlist</a>
+                        <a class="dropdown-item" href="https://www.youtube.com/watch?v=HXSgqtaS8Iw&index=2&list=PLzEc6OvKGFViwAvxCeRTi5GgMQsA7RbUi">DNS playlist</a>
+                        <a class="dropdown-item" href="https://www.youtube.com/watch?v=XfuhB3Dp-BE&list=PLzEc6OvKGFVgnYBRMuCpj6PauA2sK1GAf">FMS playlist</a>
+                        <a class="dropdown-item" href="https://youtu.be/fDl9OOrqd8A?t=51">FMS corrective series</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
 
 
-    <div class="container">
+<!-- navbar end--------------------------------------------------------- -->
+    <div class="container" style="margin-top: 100px">
         <button id='1'>Active Straight Leg Raise</button>
         <button id='2'>Cervical Patterns</button>
         <button id='3'>Deep Squat</button>

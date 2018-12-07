@@ -35,7 +35,20 @@
             color: black;
         }
 
-      
+
+        .MoveRight {
+        margin-right: 30%;
+        float: right;
+        display: inline-block;
+        color: black;
+        font-family: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+
+        }
+
+        pre {
+        color: #e83e8c
+        }
+            
         
     </style>
 
@@ -127,13 +140,15 @@
                             class="dropdown-item">MathPlotLib (DC)</a>
                         <a href="https://www.dataquest.io/blog/large_files/numpy-cheat-sheet.pdf" target="_blank" class="dropdown-item">Numpy
                             (DQ) </a>
+                        <a href="https://saeedahmed12.github.io/V/Numpy.html" target="_blank" class="dropdown-item">Numpy
+                            (SA) </a>
                         <a href="https://datacamp-community-prod.s3.amazonaws.com/e9f83f72-a81b-42c7-af44-4e35b48b20b7" target="_blank"
                             class="dropdown-item">Numpy (DC) Basics </a>
                         <a href="https://datacamp-community-prod.s3.amazonaws.com/9f0f2ae1-8bd8-4302-a67b-e17f3059d9e8" target="_blank"
                             class="dropdown-item">Pandas (DC) </a>
                         <a href="https://www.dataquest.io/blog/large_files/pandas-cheat-sheet.pdf" target="_blank" class="dropdown-item">Pandas
                             (DQ) </a>
-                        <a href="https://saeedahmed12.github.io/V/cheatsheet1.html#" target="_blank" class="dropdown-item">Pandas Basics
+                        <a href="https://saeedahmed12.github.io/V/PandasCS.html#" target="_blank" class="dropdown-item">Pandas Basics
                             (SA)</a>
                         <a href="https://datacamp-community-prod.s3.amazonaws.com/5433fa18-9f43-44cc-b228-74672efcd116" target="_blank"
                             class="dropdown-item">SciKit Learn (DC)</a>
@@ -363,6 +378,18 @@
                         </tr>
                     </tbody>
                 </table>
+
+
+                <li>Plot types</li>
+                    <table class="customTable">
+                        <tbody>
+                            <tr>
+                                <td>Row 2, Cell 1</td>
+                                <td>Row 2, Cell 2</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
         </ol>
 
         <script>
@@ -378,8 +405,13 @@
 
             <button  style="background-color: darkturquoise"   onclick="myFunction()">Example of subplot, style, tick rotation, annotations in one plot</button>
 
-            <div id="myDIV">
-                <pre class="code">
+            <div id="myDIV" style="display: none">
+
+                <table class="customTable">
+                    <tr>
+                        <td>
+<pre class="code">
+
 # Import matplotlib.pyplot
 import matplotlib.pyplot as plt, numpy as np
 
@@ -415,6 +447,11 @@ plt.show()
 
 
                 </pre>
+
+                        </td>
+                    </tr>
+                </table>
+               
             </div>
     </div>
 

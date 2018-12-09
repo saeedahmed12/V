@@ -214,10 +214,35 @@
 X.head()
 X.tail()
 X.info()
+X.describe()
+X.describe(include='all')
+df.columns
+df.index
                     </pre>
                     </td>
-                    <td></td>
+                    <td>
+Quick look
+                    </td>
                 </tr>
+
+                <tr>
+                    <td>
+                        <pre>
+# file i/o (see below)
+
+a = np.arange(0,100)                            <span class="MoveRight">#using np arrays</span>
+b = np.linspace(0,1000,100)
+df[1]=b
+
+df1 = pd.DataFrame({'key': ['a', 'b', 'c', 'd', 'e'],'A1': range(5), 'B1':range(5,10)}) <span class="MoveRight">#use dictionaries</span>
+df2 = pd.DataFrame({'key': ['a', 'b', 'c'], 'A2': range(3), 'B2':range(3,6)})
+                         </pre>
+                    </td>
+                    <td>
+                        Making dataframes
+                    </td>
+                </tr>
+
             </tbody>
         </table>
 
@@ -243,6 +268,9 @@ df.loc[['r1','r2'],['c1','c2']] <span class="MoveRight">#grab subsets</span>
 
 df[df[0]>2]                      <span class="MoveRight"> #grab rows based on col value </span>
 df[df.columns[df.iloc[5]>55]]     <span class="MoveRight">#grabbing col based on row value filter more complicated</span>
+
+df['c1'].unique()
+df['c1'].nunique()
              </pre>
                     </td>
                     <td>Columns and Rows</td>
@@ -281,11 +309,22 @@ df[df.columns[df.iloc[5]>55]]     <span class="MoveRight">#grabbing col based on
                         <pre>
 df['x1x2'] = df.apply(lamda row: row['x1']*row['x2'], axis=1)    <span class="MoveRight">#note axis 1 to apply to rows sequentially, as opposed to col's</span>
 df['x1x2'] = df.apply(function, axis=1)  <span class="MoveRight">#APPLY function to new column</span>
+
+def myFunc(row):                                <span class="MoveRight">#APPLY function by row.  Note that 'row' acts like 'df.loc['rowlabel'] if axis is 1 in call </span>
+    import numpy as np
+    if (row.isnull()['Annual Salary']==False):
+        return float(str(row['Annual Salary']).split("$")[1])
+    else:
+        return np.nan
+pay['Salaries'] = pay.apply(myFunc, axis=1)
+
                         </pre>
-                        <code>from datetime import datetime</code> <br> <span class="MoveRight">apply datetime format to date strings</span>
+                        <code>from datetime import datetime</code> <br> <span class="MoveRight">#Apply datetime format to date strings</span>
                         <code>datetime.strptime("1949-05", "%Y-%m")</code> <br>
                         <code>df['dt'] = df.apply(lambda row: datetime.strptime(row['month'], "%Y-%m"), axis=1)</code> <br>
                         <code>chipo['item_price'] = chipo.apply(lambda row: row['item_price'].strip("$"), axis=1)</code>  <span class="MoveRight">#for df 'chipo', $ is striped from price for each row</span> <br>
+                        <code>pay['Salary']=pay['Annual Salary'].str.replace('$', '').astype(float)  <span class="MoveRight">#note that <a href="http://pandas.pydata.org/pandas-docs/stable/text.html">'str'</a> allows working with text in cells</code>
+                        <br></span>
                         <code>chipo['item_price'] = pd.to_numeric(chipo['item_price'])</code>  <span class="MoveRight">#column is converted from str to float</span>
                         <pre>   
 t1 = pd.read_csv('table1.csv') <span class="MoveRight">#using MERGE to join to CSV files on a particular column </span>
@@ -293,6 +332,12 @@ t2 = pd.read_csv('table2.csv')
 m = pd.merge(t1,t2, on='userID')
 
 t1.merge(t2, on='userID') <span class="MoveRight">#MERGE can be called directly on the df</span>
+
+pd.merge(df1,df2, how='right', on='key')
+pd.merge(df1,df2, how='right', on=['k1','k2'])
+pd.concat([df1,df2]) <span class="MoveRight">#CONCATENATE default axis is 0/'index' to concatenate along</span>
+
+foobar.pivot_table(values='D',index=['A', 'B'],columns=['C'])   <span class="MoveRight">#PIVOT</span>
                         </pre>
                     </td>
                     <td></td>
@@ -302,7 +347,7 @@ t1.merge(t2, on='userID') <span class="MoveRight">#MERGE can be called directly 
                         <pre>
 chipo.groupby(['item_name']).sum()               <span class="MoveRight">#grouping data</span>
 chipo.groupby(['order_id']).count()
-chipo.groupby(['order_id']).sum().mean()
+chipo.groupby(['order_id']).mean()
 chipo.groupby(['item_name']).count().item_name.count()
 len(chipo.groupby(['item_name']).groups.keys())
                         </pre>
@@ -311,6 +356,56 @@ len(chipo.groupby(['item_name']).groups.keys())
                 </tr>
             </tbody>
         </table>
+
+
+<li>Missing Data</li>
+<table class="customTable">
+    <tbody>
+        <tr>
+            <td>
+                <pre>
+df.isnull()
+pay.isnull().sum() <span class="MoveRight">#sum of "NANs/None/NaT" in all columns of df </span>
+
+df.notnull()
+df.dropna(thresh=3)                                   <span class="MoveRight">#drop rows with filled values < 3</span> 
+df.dropna(axis=1)                                  <span class="MoveRight">#drop columns with any NAN values</span>
+df.fillna(method='ffill' ) df.fillna(value=df['A'].mean())
+                </pre>
+
+            </td>
+            <td>
+
+            </td>
+        </tr>
+
+    </tbody>
+</table>
+
+<li>Sort and Rank</li>
+<table class="customTable">
+    <tbody>
+        <tr>
+            <td>
+                <pre>
+df['c1'].value_counts()   <span class="MoveRight">#will provide number of items of each type in df['c1']</span>
+
+df.sort_values(by='col2')
+df.sort_values(by=['col1', 'col2']
+                </pre>
+
+            </td>
+            <td>
+
+            </td>
+        </tr>
+
+    </tbody>
+</table>
+
+
+
+
     </ol>
 
 

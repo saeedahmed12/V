@@ -11,6 +11,7 @@
     crossorigin="anonymous">
 
   <title>SSTEMP</title>
+  <base target="_blank">    
 </head>
 
 <body>
@@ -19,33 +20,51 @@
 
 
 
-<!–-------------------------links -------------–>
+<!-- links ------------------------------------------------->
 <textarea name="t" id="links" cols="10" rows="10" style=" display:none">
-https://www.youtube.com/playlist?list=PL8RsIlcog35sbPea4mi-UB6iqSwOCzW_X, 1
-https://movemoresitless.wordpress.com/2014/07/27/basics-of-the-ido-portal-training-method/, 2
-https://www.youtube.com/watch?v=D8QxbtcA5hUm, 3
-https://www.youtube.com/watch?v=smkXcv27zZA, 4
-https://www.youtube.com/watch?v=jRVOFd6knHE, 5
-,
-https://www.youtube.com/watch?v=epX5okzCfQk, primitive movement group
+https://www.youtube.com/playlist?list=PL8RsIlcog35sbPea4mi-UB6iqSwOCzW_X, Ido Portal Beginner playlist,
+https://movemoresitless.wordpress.com/2014/07/27/basics-of-the-ido-portal-training-method/, Blog about Ido Portal and related programs,
+https://www.youtube.com/watch?v=D8QxbtcA5hUm, 3,
+https://www.youtube.com/watch?v=smkXcv27zZA, 4,
+https://www.youtube.com/watch?v=jRVOFd6knHE, 5,
+,,
+https://youtu.be/xPwG2hqnOx0?list=PL8RsIlcog35sbPea4mi-UB6iqSwOCzW_X&t=4, squat routine 1: Soleus Dynamic Squat Stretch,
+https://youtu.be/xPwG2hqnOx0?list=PL8RsIlcog35sbPea4mi-UB6iqSwOCzW_X&t=18, squat routine 2: Hip Rotations On All Fours,
+https://youtu.be/xPwG2hqnOx0?list=PL8RsIlcog35sbPea4mi-UB6iqSwOCzW_X&t=46, squat routine 3: Hip Rotations,
+https://youtu.be/xPwG2hqnOx0?list=PL8RsIlcog35sbPea4mi-UB6iqSwOCzW_X&t=63, squat routine 4: Toes Stretch,
+https://youtu.be/xPwG2hqnOx0?list=PL8RsIlcog35sbPea4mi-UB6iqSwOCzW_X&t=74, squat routine 5: Dynamic Toes Stretch,
+https://youtu.be/xPwG2hqnOx0?list=PL8RsIlcog35sbPea4mi-UB6iqSwOCzW_X&t=95, squat routine 6: Static Squat,
+https://youtu.be/xPwG2hqnOx0?list=PL8RsIlcog35sbPea4mi-UB6iqSwOCzW_X&t=106, squat routine 7: Dynamic Squats,
+,,
+https://www.youtube.com/watch?v=lbozu0DPcYI&t=0s&index=4&list=PL8RsIlcog35sbPea4mi-UB6iqSwOCzW_X, Squat Routine 2, 
+,,
+https://youtu.be/y4Wo095zPnc?list=PL8RsIlcog35sbPea4mi-UB6iqSwOCzW_X&t=7, scapula1 -- short push ups with band,
+https://youtu.be/y4Wo095zPnc?list=PL8RsIlcog35sbPea4mi-UB6iqSwOCzW_X&t=28, scapula2 -- overhead straight arm pull down,
+https://youtu.be/y4Wo095zPnc?list=PL8RsIlcog35sbPea4mi-UB6iqSwOCzW_X&t=50, scapula3 -- the whippet,
+https://youtu.be/y4Wo095zPnc?list=PL8RsIlcog35sbPea4mi-UB6iqSwOCzW_X&t=72, scapula4 -- shoulder dislocations,
+,,
+https://www.youtube.com/watch?v=AHWXtRS1_D8&list=PL8RsIlcog35sbPea4mi-UB6iqSwOCzW_X&index=10, roll,
+#,,-----------------------------------
+https://www.youtube.com/watch?v=epX5okzCfQk, primitive movement group,
+#,,-----------------------------------
+https://www.youtube.com/watch?v=_yMHHhxwlt4, Mantak Chia; 6 healing sounds,
 </textarea>
 
 
-<!–-------------------------images -------------–>
+<!-------------------------images ------------>
 <textarea name="t" id="images" cols="10" rows="10" style=" display:none">
 </textarea>
 
 
-<!–-------------------------SCRIPT BELOW -------------–>
+<!-------------------------SCRIPT BELOW ------------->
 
 <div class="container">
-Ido Portal <br>
 <script>
   //take line of text and do something with it, remember line return counts as a line at end (hence -1)
   var lines = document.getElementById('links').innerHTML.split('\n'); // splits into lines
   for (var i = 0; i < lines.length - 1; i++) {
     L = lines[i].split(','); // splits each line at comma
-    document.write(' <a href="' + L[0] + '" target="_blank">' + L[1] + '</a><br>')
+    document.write(' <a href="' + L[0] + '">' + L[1] + '</a>' +L[2]+ '<br>')
   }
 </script>
 <hr>

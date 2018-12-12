@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+
+    <title>SSTEMP</title>
+    <base target="_blank">
+</head>
+
+<body>
+
+
+
+
+
+    <!-- links ------------------------------------------------->
+    <textarea name="t" id="links" cols="10" rows="10" style=" display:none">
+https://www.coursera.org/learn/understanding-visualization-data/lecture/K2loL/interview-perspectives-on-statistics-in-real-life, Courera(FB)- Vis with Python: , Stats and visualization (audit only)
+https://thisisstatistics.org/, This is Statistics: , American Statistical Association's awareness building site
+    </textarea>
+
+
+    <!-------------------------images ------------>
+    <textarea name="t" id="images" cols="10" rows="10" style=" display:none">
+</textarea>
+
+
+    <!-------------------------SCRIPT BELOW ------------->
+
+    <div class="container">
+        <script>
+            //take line of text and do something with it, remember line return counts as a line at end (hence -1)
+            var lines = document.getElementById('links').innerHTML.split('\n'); // splits into lines
+            for (var i = 0; i < lines.length - 1; i++) {
+                L = lines[i].split(','); // splits each line at comma
+                document.write(' <a href="' + L[0] + '">' + L[1] + '</a>' + L[2] + '<br>')
+            }
+        </script>
+        <hr>
+
+        <script>
+            //take line of text and do something with it, remember line return counts as a line at end (hence -1)
+            var lines = document.getElementById('images').innerHTML.split('\n'); // splits into lines
+            for (var i = 0; i < lines.length - 1; i++) {
+                L = lines[i].split(','); // splits each line at comma
+                document.write('<figure style="border-style: solid"><img src="' +
+                    L[0] +
+                    '" alt="" width="80%"><br><hr><p style ="text-align: center;">' +
+                    L[1] + '</p></figure>')
+            }
+        </script>
+
+    </div>
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

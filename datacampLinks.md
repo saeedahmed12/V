@@ -7,7 +7,7 @@
 [importing data](https://www.datacamp.com/tracks/data-scientist-with-python)  
 [importing from internet](https://campus.datacamp.com/courses/importing-data-in-python-part-2/importing-data-from-the-internet-1?ex=1)  
 [Exploring data](https://campus.datacamp.com/courses/importing-data-in-python-part-2/importing-data-from-the-internet-1?ex=1)  
-[Pandas Intro](https://www.datacamp.com/courses/pandas-foundations)
+[Pandas Intro](https://www.datacamp.com/courses/pandas-foundations)  
 [manipulating with pandas ](https://www.datacamp.com/courses/manipulating-dataframes-with-pandas)  
 [merging with pandas](https://www.datacamp.com/courses/merging-dataframes-with-pandas)  
 

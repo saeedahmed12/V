@@ -24,12 +24,14 @@
     <textarea name="t" id="links" cols="10" rows="10" style=" display:none">
 https://codepen.io/saeedahmed12/full/KGqPPW, Python Reference,
 https://saeedahmed12.github.io/V/DVRef.html, Data Visualization reference,
+,,---------------------------------
+http://data.un.org/, UN data,
+https://introcs.cs.princeton.edu/java/data/, Princeton,
+http://statweb.stanford.edu/~sabatti/data.html, Stanford,
+https://www.kaggle.com/datasets?utm_medium=paid&utm_source=google.com&utm_campaign=datasets+houseads&gclid=EAIaIQobChMIzdfbi-mx3wIVy1cNCh3pPQQVEAAYASAAEgJ9mPD_BwE,Kaggle,
+,,---------------------------------
 https://campus.datacamp.com/courses/intro-to-python-for-data-science/chapter-4-numpy?ex=1, Numpy, DC
-https://www.datacamp.com/courses/cleaning-data-in-python, exploring data, DC
-https://campus.datacamp.com/courses/intermediate-python-for-data-science/matplotlib?ex=1, Matplotlib1, DC
-https://campus.datacamp.com/courses/pandas-foundations/data-ingestion-inspection?ex=1, Pandas, DC
-https://campus.datacamp.com/courses/introduction-to-data-visualization-with-python/customizing-plots?ex=1, MatPlotlib2, DC
-https://github.com/saeedahmed12/V/blob/master/datacampLinks.md, DataCamp links,
+https://github.com/saeedahmed12/V/blob/master/datacampLinks.md, Other DataCamp links,
 https://www.coursera.org/learn/understanding-visualization-data/lecture/K2loL/interview-perspectives-on-statistics-in-real-life, Courera(FB)- Vis with Python: , Stats and visualization (audit only)
 https://thisisstatistics.org/, This is Statistics: , American Statistical Association's awareness building site
     </textarea>
@@ -56,15 +58,24 @@ https://thisisstatistics.org/, This is Statistics: , American Statistical Associ
     <div class="container">
         <script>
             //take line of text and do something with it, remember line return counts as a line at end (hence -1)
-            document.write('<ol>')
+            document.write('<ul>')
             var lines = document.getElementById('links').innerHTML.split('\n'); // splits into lines
             for (var i = 0; i < lines.length - 1; i++) {
                 L = lines[i].split(','); // splits each line at comma
                 document.write(' <li><a href="' + L[0] + '">' + L[1] + '</a>' + L[2] + '</li>')
             }
-            document.write('</ol>')
+            document.write('</ul>')
         </script>
         <hr>
+
+
+
+
+
+
+
+
+
 
         <script>
             //take line of text and do something with it, remember line return counts as a line at end (hence -1)

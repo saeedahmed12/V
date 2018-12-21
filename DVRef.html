@@ -439,11 +439,15 @@
                     <tr>
                         <td>
                             <pre>
-    a = np.array([[6,4,2,2,0],
+    a = np.array([[6,4,2,2,0],                        
     [5,9,1,2,5]], float)
-    a[a>=6].astype(int)
-    a[np.logical_or(a<2, a>4)]                    #complicated booleans
-    
+    a[a>=6]                                               #boolean mask
+    a[np.logical_or(a&lt;2, a&gt;4)]                     #complicated booleans
+
+    a = (np.random.rand(5,5)*1000//10).astype(int)
+    BOOL = (a&gt;9)&amp;(a&lt;51)                        #another way to write complicated booleans
+    a[BOOL]
+        
     a = np.array([2, 4, 6, 8], float)
     b = np.array([0, 0, 1, 3, 2, 1], int)
     a[b]                                          #b as index for a (b can also be a list)
@@ -524,13 +528,38 @@ df.index
                 <td>
                     <pre>
 # file i/o (see below)
+--------------------------
+
+df = pd.DataFrame(s)                      <span class="MoveRight">#from series; where s is a series</span>
+--------------------------------
+s = pd.Series(np.random.rand(10))
+t = pd.Series(range(2,22,2))
+u = pd.Series(list('abcdefghij'))
+-------------------
+
 
 a = np.arange(0,100)                            <span class="MoveRight">#using np arrays</span>
+df = pd.DataFrame(a)
 b = np.linspace(0,1000,100)
 df[1]=b
+-------------------------
 
 df1 = pd.DataFrame({'key': ['a', 'b', 'c', 'd', 'e'],'A1': range(5), 'B1':range(5,10)}) <span class="MoveRight">#use dictionaries</span>
 df2 = pd.DataFrame({'key': ['a', 'b', 'c'], 'A2': range(3), 'B2':range(3,6)})
+
+population = [ 38332521, 26448193, 19651127, 19552860, 12882135]
+area = [423967, 695662, 141297, 170312, 149995]
+states = ['California', 'Florida', 'Illinois', 'New York', 'Texas']
+
+df3 = pd.DataFrame(population)
+df3.index = index
+df3.columns = ['Pop', 'Area']
+
+df3 = pd.DataFrame({'Pop':population, 'Area': area}, index=states)
+-----------
+
+
+
                          </pre>
                 </td>
                 <td>

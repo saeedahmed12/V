@@ -1,116 +1,198 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <base target="_blank">
-    <meta charset="utf-8">
-     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+<head>
+  <base target="_blank">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-     <!-- Bootstrap core CSS -->
-     <!-- Bootstrap core CSS -->
-
-<link href="https://getbootstrap.com/docs/3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Tufte-->
-    <link rel="stylesheet" href="https://edwardtufte.github.io/tufte-css/tufte.css"/>
-    <link rel="stylesheet" href="https://edwardtufte.github.io/tufte-css/latex.css"/>
-
- <style>
-body {padding-left: 10%;}
-section > p, section > footer, section > table {width: 60%;}
-pre {border-width: 0px; background-color: #f9f2f4;}
-code{
-  background-color: #f9f2f4;
-  color: #333
-}
-
-ul {
-    list-style-type: none;
-    margin: 0;
- padding-left: 15%;
-
-
-}
-
-li {
-    display: inline;
-    padding-right: 10px;
-    text-decoration: none;
-}
-
-
-.dropdown-menu>li {
-  padding: 0px;
-}
-
-.navbar-default {
-  border: 0;
-}
-
- </style>
-
-    <title>Drug Info</title>
-  </head>
-  <body>
-
-  
-
-    <!-- CONTENT BELOW-->
-
-
-    <article>
-          <h1 id="tufte-css">Drug Information from US and EU Regulatory Sites</h1>
-      
-
-
-<!--  ------------------------------------------------------------------------- -->
-<section>
-  <h2 id="W">FDA</h2>
-  <div style="padding-left:5%">
-    <p><a href="https://dailymed.nlm.nih.gov/dailymed/index.cfm">DailyMed</a>: US National Library of Medicine's website containing product labeling for drugs approved in the US </p>
-   <p><a href="https://www.accessdata.fda.gov/scripts/cder/daf/">Drugs@FDA</a>: FDA warehouse containing labels and SBAs</p>
-  </div>
-  
-  
-    <h2 id="W">Europe</h2>
-    <div style="padding-left:5%">
-    <p><a href="https://www.medicines.org.uk/emc">EMC</a>: UK's official storage of prescribing and patient information (SmPC's and PILs) </p>
-   <p><a href="https://www.ema.europa.eu/en/medicines/field_ema_web_categories%253Aname_field/Human/ema_group_types/ema_medicine?search_api_views_fulltext=">EMA Medicines Search Page</a>: EPARs for drugs under EMA purview can be searched here</p>
-            <p><a href="https://www.ema.europa.eu/en/medicines/download-medicine-data">EMA Medicines Data</a>: Links to various reports providing drug info</p>
-      
-      <p><a href="http://www.medicinesauthority.gov.mt/search-medicine-results?modSearch=sim&field=">Malta Medicines Authority</a>: Easy access to SmPC's and PILs</p>
-            <p><a href="https://pharm-infolinks.webnode.cz/drug-databases/national-drug-databases-eu/">INFOlinks</a>: Site has many deadlinks but allows access to SmPC's of many EU countries</p>
-      
-      
-  </div>
-
- 
-  <h2 id="W">Other</h2>
-  <div style="padding-left:5%">
-    <p><a href="https://www.diaglobal.org/productfiles/27296/11022%20-%20session%207%20lachmann%20slides%20[compatibility%20mode].pdf">DIA presentation</a>: "Harmonization of Labeling Across Products with Same Products with Same Active Moiety in the EU" by Barbara Lachmann, Merck, Oct 2011</p>
-   <p><a href="http://pharmafellows.rutgers.edu/wp-content/uploads/2018/09/2012-comparisonoftheuspackageinsertandtheeusummaryofproductcharacteristics.pdf">Poster Presentation</a>: "Comparison of the US Package Insert and the EU Summary of Product Characteristics" by Bordoloi et al, Rutgers Univ, 2012 </p>
-  </div>
-  
-
-  
+  <!-- Bootstrap 3 CSS -->
+  <link href="https://getbootstrap.com/docs/3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
 
 
-
-      
-      
-
-
+  <!-- Tufte CSS-->
+  <link rel="stylesheet" href="https://edwardtufte.github.io/tufte-css/tufte.css" />
+  <link rel="stylesheet" href="https://edwardtufte.github.io/tufte-css/latex.css" />
 
 
-              
+  <title>Drug Info</title>
 
-           
+  <style>
+    body {
+      padding-left: 10%;
+    }
+
+    section>p,
+    section>footer,
+    section>table {
+      width: 60%;
+    }
+
+    pre {
+      border-width: 0px;
+      background-color: #f9f2f4;
+    }
+
+    code {
+      background-color: #f9f2f4;
+      color: #333
+    }
+
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding-left: 15%;
 
 
-        </article>
-    <!-- CONTENT ABOVE-->
+    }
+
+    li {
+      display: inline;
+      padding-right: 10px;
+      text-decoration: none;
+    }
+
+
+    .dropdown-menu>li {
+      padding: 0px;
+    }
+
+    .navbar-default {
+      border: 0;
+    }
+  </style>
+
+  <!-- CSS and JSS for NavBar -->
+  <style>
+    table.customTable {
+      width: 100%;
+      background-color: #FFFFFF;
+      border-collapse: collapse;
+      border-width: 2px;
+      border-color: #7ea8f8;
+      border-style: solid;
+      color: #000000;
+    }
+
+    table.customTable td,
+    table.customTable th {
+      border-width: 2px;
+      border-color: #7ea8f8;
+      border-style: solid;
+      padding: 5px;
+    }
+
+    table.customTable thead {
+      background-color: #7ea8f8;
+    }
+  </style>
+
+
+  <!-- CSS and JSS for NavBar END-->
+
+
+</head>
+
+<body>
+
+  <!-- Navbar start---------------------------------------------------------------- -->
+
+   <!-- NAV Start-->
+   <nav class="navbar navbar-default navbar-fixed-top">
+     <div class="container">
+       <div class="navbar-header">
+         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+           aria-expanded="false" aria-controls="navbar">
+           <span class="sr-only">Toggle navigation</span>
+           <span class="icon-bar"></span>
+           <span class="icon-bar"></span>
+           <span class="icon-bar"></span>
+         </button>
+       </div>
+       <div id="navbar" class="navbar-collapse collapse">
+         <ul class="nav navbar-nav">
+           <li><a href="#about" style='background-repeat: no-repeat;'></a></li> <!-- leave  blank for alignment-->
+           <li><a href="#about" style='background-repeat: no-repeat;'>HOME</a></li>
+
+           <li class="dropdown">
+             <a href="#" style='background-repeat: no-repeat;' class="dropdown-toggle" data-toggle="dropdown"
+               role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+             <ul class="dropdown-menu">
+               <li><a href="#" style='background-repeat: no-repeat;'>Action</a></li>
+               <li><a href="#" style='background-repeat: no-repeat;'>Another action</a></li>
+               <li><a href="#" style='background-repeat: no-repeat;'>Something else here</a></li>
+             </ul>
+           </li>
+
+         </ul>
+
+       </div>
+       <!--/.nav-collapse -->
+     </div>
+   </nav>
+
+
+  <!-- Navbar End---------------------------------------------------------------- -->
+
+  <!-- CONTENT BELOW-->
+
+
+  <article>
+    <h1 id="tufte-css">Drug Information from Regulatory Sites</h1>
+
+
+
+    <!--  ------------------------------------------------------------------------- -->
+    <section>
+      <h2 id="W">FDA</h2>
+      <div style="padding-left:5%">
+        <p><a href="https://dailymed.nlm.nih.gov/dailymed/index.cfm">DailyMed</a>: US National Library of Medicine's
+          website containing product labeling for drugs approved in the US </p>
+        <p><a href="https://www.accessdata.fda.gov/scripts/cder/daf/">Drugs@FDA</a>: FDA warehouse containing labels and
+          SBAs</p>
+      </div>
+
+
+      <h2 id="W">Europe</h2>
+      <div style="padding-left:5%">
+        <p><a href="https://www.medicines.org.uk/emc">EMC</a>: UK's official storage of prescribing and patient
+          information (SmPC's and PILs) </p>
+        <p><a
+            href="https://www.ema.europa.eu/en/medicines/field_ema_web_categories%253Aname_field/Human/ema_group_types/ema_medicine?search_api_views_fulltext=">EMA
+            Medicines Search Page</a>: EPARs for drugs under EMA purview can be searched here</p>
+        <p><a href="https://www.ema.europa.eu/en/medicines/download-medicine-data">EMA Medicines Data</a>: Links to
+          various reports providing drug info</p>
+
+        <p><a href="http://www.medicinesauthority.gov.mt/search-medicine-results?modSearch=sim&field=">Malta Medicines
+            Authority</a>: Easy access to SmPC's and PILs</p>
+        <p><a href="https://pharm-infolinks.webnode.cz/drug-databases/national-drug-databases-eu/">INFOlinks</a>: Site
+          has many deadlinks but allows access to SmPC's of many EU countries</p>
+
+
+      </div>
+
+
+      <h2 id="W">Other Information</h2>
+      <div style="padding-left:5%">
+        <p><a
+            href="https://www.diaglobal.org/productfiles/27296/11022%20-%20session%207%20lachmann%20slides%20[compatibility%20mode].pdf">DIA
+            presentation</a>: "Harmonization of Labeling Across Products with Same Products with Same Active Moiety in
+          the EU" by Barbara Lachmann, Merck, Oct 2011</p>
+        <p><a
+            href="http://pharmafellows.rutgers.edu/wp-content/uploads/2018/09/2012-comparisonoftheuspackageinsertandtheeusummaryofproductcharacteristics.pdf">Poster
+            Presentation</a>: "Comparison of the US Package Insert and the EU Summary of Product Characteristics" by
+          Bordoloi et al, Rutgers Univ, 2012 </p>
+      </div>
+
+
+  </article>
+  <!-- CONTENT ABOVE-->
+
+
+
+
   <div style="padding-left: 30%">
     Email suggestions to Saeed Ahmed at:
     <a href="mailto:SAhmedMD@gmail.com" target="_top" class="w3-hover-text-green">SAhmedMD@gmail.com </a>&nbsp;&nbsp;
@@ -127,6 +209,7 @@ li {
     <script src="https://getbootstrap.com/docs/3.3/dist/js/bootstrap.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="https://getbootstrap.com/docs/3.3/assets/js/ie10-viewport-bug-workaround.js"></script>
-    <script src="script.js" ></script>
-  </body>
+    <script src="script.js"></script>
+</body>
+
 </html>

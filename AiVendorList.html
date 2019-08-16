@@ -1,49 +1,31 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
+  <title>AI Vendors</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="jumbotron text-center">
+  <h1>Organizations Providing AI and Related Tools for Clinical Research</h1>
+  <p>The list below is provided to illustrate what types of tools are currently available.  This list is not comprehensive, and no endorsement is intended.</p> 
+</div>
+  
+
+
+<div class="container">
+
+  <head>
         <meta charset="UTF-8">
 
 
         <style>
-                body {
-                        background-color: lightgray;
-                        font-family: sans-serif;
-
-                }
-
-                h1,
-                h2 {
-                        color: black;
-                        text-align: center;
-                        font-size: 50px;
-                }
-
-
-                div {
-                        width: 800px;
-                        margin: auto;
-                        /*border: 3px solid green; */
-                }
-
-                a:link {
-                        color: black;
-                }
-
-                a:visited {
-                        color: #1e1d1e;
-                }
-
-
-                hr {
-                        background: black;
-                        height: 2px;
-                }
-
-                span {
-                        font-size: 20px;
-                }
-
+                
 
 
                 th,
@@ -54,298 +36,28 @@
                 }
 
 
-                button {
-                        padding: 30px 70px;
-                        width: 300px;
-                        height: 150px;
-                        background-color: #464b51;
-                        cursor: pointer;
-                        color: white;
-                        font-size: 20px;
-                        border: none;
 
-                }
-
-
-                .surveyB {
-                        padding: 30px 70px;
-                        background-color: #501c59;
-                        cursor: pointer;
-                        color: white;
-                        font-size: 30px;
-                        border: none;
-
-                }
-
-                .contentdiv {
-                        padding: 5px;
-                        margin: auto;
-                        display: none;
-                        text-align: left;
-                }
-
-                a,
-                p {
-                        display: inline;
-                }
-
-
-                .center {
-                        text-align: center;
-
-                }
-
-
-                .headerDiv {
-
-                        text-align: center;
-                        background-color: #111111;
-                        color: white;
-                        margin: 20px 0 20px 0;
-                        padding: 20px;
-                        width: 100%;
-                        margin-left: auto;
-                        margin-right: auto;
-                }
-
-
-                .w3-hover-text-green:hover {
-                        opacity: 0.5;
-                }
         </style>
 
 </head>
-
-<body>
-
-
-
-        <h1 class='headerDiv'>Artificial Intelligence in Medical Affairs</h1>
-
-
-
-        <div class="center">
-
-        </div>
-
-
-
-
-
-
-        <!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx  What is AI  xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->
-        <br><br>
-
-        <div class='center'><button onclick="toggle('j5')" class='content w3-hover-text-green'>What is AI?</button><br>
-                <div class="contentdiv" id="j5" style="border: 3px solid gray; ">
-
-                        <div style="position:relative;height:0;padding-bottom:56.21%"><iframe
-                                        title="YouTube video player" class="youtube-player" type="text/html" width="800"
-                                        height="430" src="https://www.youtube.com/embed/D5VN56jQMWM" frameborder="0"
-                                        allowFullScreen></iframe></div>
-
-
-                        <p>Above is a video demonstrating Google duplex, unveiled at Google's I/O convention (May 8-10,
-                                2018).
-                                Start at 2:50 if you are short on time.
-                                This is a very advanced application of "narrow" AI, and is remarkable
-                                because it shows that narrow AI may pass the Turing test, at least under certain
-                                conditions.</p>
-                        <br><br>
-                        <a href="http://www.r2d3.us/visual-intro-to-machine-learning-part-1/" target="_blank">
-                                This</a>
-                        <p> is a visual introduction from R2D3. In this basic approach, a decision tree is formed for
-                                illustration
-                                purposes, using data on homes in New York City and San Francisco. The principles used
-                                here are similar
-                                to those applied in more advanced ML applications.
-                                <br><br>
-
-                                <p><a href="https://www.youtube.com/watch?v=wvsE8jm1GzE&" target="_blank">This</a> video
-                                        is one the best illustrations
-                                        available
-                                        currently on the internet, which in a few minutes provides an introduction to
-                                        the 'black box' that machine
-                                        learning
-                                        is often perceived as. </p>
-                                
-                                <p>In the past, ML capabilities were available to primarily to large private, government
-                                        and academic
-                                        institutions, but are now becoming widely available (although big organizations
-                                        maintain many
-                                        advantages). Many organizations are providing standard
-                                        platforms and (often free) training, e.g. <a href="https://goo.gl/oFmW2S"
-                                                target="_blank">Google</a>,
-                                        <a href="https://aws.amazon.com/training/learning-paths/machine-learning/"
-                                                target="_blank">Amazon</a>,
-                                        <a href="https://goo.gl/P9F4MW" target="_blank">Hortonworks</a> and others. </p>
-                                <br><br>
-                                <hr>
-                                <h3>MLaaS</h3>
-                                <p>Machine Learning as a Service,
-                                        or "<a href="https://learn.g2.com/trends/machine-learning-service-mlaas"
-                                                target="_blank">MLaaS</a>"
-                                        is becoming a term of use
-                                        in the trade, and refers to the off-the-shelf (often in a cloud-computing format) provision of tools such data visualization,
-                                        facial recognition, natural
-                                        language processing, predictive analytics and deep learning. The number of
-                                        providers making standard and
-                                        customized "APIs" (application program interfaces) that allow machine learning
-                                        to be conveniently applied to
-                                        business opportunities is increasing rapidly.</p>
-
-                </div><br><br>
-
-        </div>
-
-        <hr style="background: black; width: 70%;">
-        <br><br>
-
-
-
-
-
-
-        <!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx  Key Concepts   xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->
-        <div class='center'><button onclick="toggle('j6')" class='content w3-hover-text-green'>Key Concepts</button><br>
-                <div class="contentdiv" id="j6" style="border: 3px solid gray; ">
-
-
-
-
-                        <p>Structured vs Unstructured</p>
-                        <br><br>
-                        <hr>
-                        <p>Supervised vs. Unsupervsied </p>
-
-                </div><br><br>
-
-        </div>
-
-        <hr style="background: black; width: 70%;">
-        <br><br>
-
-        <!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx  podcasts and trends  xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->
-
-
-        <div class='center'><button onclick="toggle('j15')" class='content w3-hover-text-green'>Podcasts and
-                        Trends</button><br>
-                <div class="contentdiv" id="j15" style="border: 3px solid gray; ">
-
-
-                        <p><b>Podcasts</b></p>
-
-
-
-                        <ul>
-                                <li><a href='https://after-on.com/episodes/028' target='_blank'>Exponential
-                                                Medicine:</a> This episode
-                                        of the "After-on" podcast
-                                        emphasizes the changes occurring in medicine due to emerging technologies. Both
-                                        the host, Rob
-                                        Reid, and guest, Daniel Craft,
-                                        are great communicators involved in the forefront of these technologies.
-                                        New concepts such as 'digital exhaust', 'quantified self', visual reality,
-                                        augmented reality and
-                                        others
-                                        are discussed. </li>
-
-                                <li><a href='https://podcasts.apple.com/us/podcast/artificial-intelligence-in-industry-with-dan-faggella/id670771965?mt=2'
-                                                target='_blank'>Tech Emergence Podcast:</a> This podcast series,
-                                        produced by <a href="https://danfaggella.com/" target='_blank'>Daniel
-                                                Faggella</a>, features interviews
-                                        with industry
-                                        leaders involved in the development of AI and its incorporation into business.
-                                </li>
-                        </ul>
-                        <hr>
-                        <p><b>Trends</b></p>
-
-
-                        <ul>
-
-                                <li><a href='https://www.statnews.com/2019/04/02/fda-new-rules-for-artificial-intelligence-in-medicine/'
-                                                target='_blank'>FDA developing new rules for artificial intelligence in medicine</a></li>
-                                <li><a href='https://www.fda.gov/media/122535/download' target='_blank'>FDA: Proposed Regulatory Framework for
-                                                Modifications to Artificial Intelligence/Machine Learning (AI/ML)-Based Software as a Medical Device
-                                                (SaMD) </a></li>
-
-
-
-                                <li><a href='https://healthitanalytics.com/news/artificial-intelligence-could-increase-clinical-trial-success-rates'
-                                                target='_blank'>Artificial Intelligence Could Increase Clinical Trial Success Rates</a></li>
-                                <li><a href='https://medicalxpress.com/news/2019-07-artificial-intelligence-solution-clinical-trial.html'
-                                                target='_blank'>Artificial intelligence solution improves clinical trial recruitment</a></li>
-                                <li><a href='https://www.mobihealthnews.com/news/north-america/eko-announces-new-platform-designed-support-drug-trials-continuous-remote'
-                                                target='_blank'>Eko announces new platform designed to support drug trials with continuous remote
-                                                monitoring, machine learning</a></li>
-                                <li><a href='https://venturebeat.com/2019/08/14/verisim-life-uses-ai-powered-biosimulations-to-replace-animal-drug-testing/'
-                                                target='_blank'>Verisim Life uses AI-powered biosimulations to replace animal drug testing</a></li>
-
-
-                                <li><a href="https://www.fda.gov/NewsEvents/Newsroom/PressAnnouncements/ucm604357.htm"
-                                                target='_blank'>FDA
-                                                permits marketing of artificial intelligence-based device to detect
-                                                certain diabetes-related
-                                                eye problems</a>
-                                </li>
-                                <li><a href="http://www.digitaljournal.com/life/health/microsoft-starts-to-support-clinical-trials/article/506738"
-                                                target='_blank'>Microsoft starts to support clinical trials</a></li>
-                                <li><a href="https://www.fiercebiotech.com/cro/former-fda-chief-information-officer-and-takeda-executive-lands-at-datavant"
-                                                target='_blank'>Former FDA chief information officer and Takeda
-                                                executive lands at Datavant</a></li>
-                                <li><a href="https://asia.nikkei.com/Business/Companies/Pharmaceutical-maker-Shionogi-tapping-AI-to-speed-drug-development"
-                                                target='_blank'>Pharmaceutical maker Shionogi tapping AI to speed drug
-                                                development</a></li>
-                                <li><a href="https://www.reuters.com/article/us-astrazeneca-ai-berg-idUSKCN1B81G1"
-                                                target='_blank'>AstraZeneca
-                                                taps AI for drug discovery in deal with Berg</a></li>
-
-
-                                <li><a href="http://www.newsweek.com/google-retinal-scans-predict-heart-attack-812098"
-                                                target='_blank'>Google
-                                                Retinal Scans Can Predict if You Will Have a Heart Attack</a></li>
-                                <li><a href="https://www.prnewswire.com/news-releases/the-new-oura-ring-helps-users-sleep-rest-and-be-active-at-the-right-time-300565048.html"
-                                                target='_blank'>The New Oura Ring Helps Users Sleep, Rest and be Active
-                                                at the Right Time </a></li>
-                                <li><a href="http://www.healthcareitnews.com/news/apple-reveals-39-hospitals-launch-apple-health-records"
-                                                target='_blank'>Apple reveals 39 hospitals to launch Apple Health
-                                                Records</a></li>
-                                <li><a href="https://ai.googleblog.com/2018/05/deep-learning-for-electronic-health.html"
-                                                target='_blank'>Google's deep learning system aims to tame electronic
-                                                health records</a></li>
-                                <li><a href="https://youtu.be/F5Z52jl4yHQ" target='_blank'>Michio Kaku: Who is right
-                                                about AI: Mark
-                                                Zuckerberg or Elon Musk?</a>. Note that the controversy here concerns
-                                        general artificial
-                                        intelligence, and not narrow AI. All current AI is narrow AI. </li>
-
-
-                        </ul>
-
-
-
-                        <hr>
-
-                        <p>Below, a few organizations that engage in AI are listed alphabetically. This
-                                is a sample, as the universe of such companies is now quite large, and growing rapidly
-                                (please note
-                                that listing them doesn't imply endorsement
-                                of their products). Formation of partnerships and collaborations is quite frequent
-                                (between tech and
-                                tech, tech and CROs, etc.)</p><br><br>
-
-                        <table style="text-align: left; width: 800px;" cellpadding="2" cellspacing="2">
+<table style="text-align: left; width: 800px;" cellpadding="2" cellspacing="2">
                                 <tbody>
                                         <tr>
                                                 <td style="text-align: left; width: 166px;"><a
-                                                                href="http://researchkit.org/" target="_blank">Apple</a>
+                                                                href="https://www.apple.com/researchkit/"
+                                                                target="_blank">Apple</a>
                                                 </td>
                                                 <td style="width: 816px;">Apple is transforming clinical research and
                                                         healthcare in a variety
                                                         of ways. The "ResearchKit" allows clinical researchers to engage
                                                         with Apple's technology.
                                                         <ul>
+
+                                                            <li><a href='https://clinicaltrials.gov/ct2/show/NCT03769207'
+                                                                    target='_blank'>Evaluation of the Use of Apple Watch
+                                                                    Features for Identification of Cardiac
+                                                                    Arrhythmias</a></li>
+
                                                                 <li><a href="https://www.outsourcing-pharma.com/Article/2018/01/29/What-Apple-s-Health-Records-update-means-for-the-clinical-trials-industry"
                                                                                 target="_blank">What Apple's Health
                                                                                 Records update means for the clinical
@@ -364,11 +76,12 @@
 
                                                 </td>
                                         </tr>
+                                  
                                         <tr>
                                                 <td style="text-align: left; width: 166px;"><a
                                                                 href="https://converseon.com/"
                                                                 target="_blank">Converseon</a></td>
-                                                <td style="width: 816px;">Converseon specializes in social listening,
+                                                <td style="width: 816px;">Converseon provides a semi-supervised ML interface to process social listening data,
                                                         which currently is used
                                                         more in marketing than in clinical research. However, their
                                                         technology can be adapted for
@@ -382,9 +95,14 @@
                                                                                 clinical trial testing whether social
                                                                                 listening can help recruitment in
                                                                                 clinical trials</a></li>
+                                                            <li><a href='https://www.socialmedia.biz/top-17-social-media-monitoring-vendors-for-business/'
+                                                                    target='_blank'>Top 17 Social Media Monitoring
+                                                                    Vendors</a></li>
+
                                                         </ul>
                                                 </td>
                                         </tr>
+                                  
                                         <tr>
                                                 <td style="text-align: left; width: 166px;"><a
                                                                 href="https://datavant.com/"
@@ -396,6 +114,12 @@
                                                         recently, with a disruptive and innovative focus, but still
                                                         unproven record.
                                                         <ul>
+                                                            <li><a href='https://www.parexel.com/news-events-resources/news/current/parexel-and-datavant-partner-deliver-advanced-data-and-real-world-evidence-analytics-enhance-drug-development-and-commercializat'
+                                                                    target='_blank'>Parexel and Datavant Partner to
+                                                                    Deliver Advanced Data and Real-World Evidence
+                                                                    Analytics to Enhance Drug Development and
+                                                                    Commercialization</a></li>
+
                                                                 <li><a href='https://www.fiercebiotech.com/biotech/silicon-valley-vet-to-run-new-roivant-trial-ai-company'
                                                                                 target='_blank'>Silicon Valley vet to
                                                                                 run new Roivant trial AI company </a>
@@ -417,8 +141,8 @@
                                                 <td style="text-align: left; width: 166px;"><a href="https://deep6.ai/"
                                                                 target="_blank">Deep6</a></td>
                                                 <td style="width: 816px;">Deep6 applies natural language processing (a
-                                                        type of AI) on
-                                                        unstructured electronic health records to find patiients who may
+                                                        type of AI) on to
+                                                        unstructured electronic health records to find patients who may
                                                         be eligible for clinical
                                                         trials.
                                                         <ul>
@@ -438,12 +162,8 @@
                                                 <td style="text-align: left; width: 166px;"><a
                                                                 href="https://healthpolicy.duke.edu/sites/default/files/atoms/files/duke-margolis_mhealth_action_plan.pdf"
                                                                 target="_blank">Duke</a></td>
-                                                <td style="width: 816px;">A highly esteemed academic institution, Duke
-                                                        now has started their
-                                                        own CRO, and frequently forms partnerships. They organized a
-                                                        conference to develop a way to
-                                                        categorize new forms of data; output of which is linked to the
-                                                        left in this row.</td>
+                                                <td style="width: 816px;">Duke investigators organized a
+                                                        conference to discuss new forms of data</td>
                                         </tr>
                                         <tr>
                                                 <td style="text-align: left; width: 166px;"><a
@@ -507,41 +227,26 @@
                                                         things too.
                                                         <ul>
                                                                 <li><a href='https://www.clinicalleader.com/doc/google-and-apple-compete-for-clinical-trial-supremacy-0001'
-                                                                                target='_blank'>Google And Apple Compete
-                                                                                For Clinical Trial Supremacy</a></li>
-                                                                <li><a href='https://www.clariness.com/2016/11/08/google-adwords-digital-patient-recruitment-clinical-trials/'
-                                                                                target='_blank'>Google AdWords and
-                                                                                Digital Patient Recruitment for Clinical
-                                                                                Trials</a></li>
+                                                                        target='_blank'>Google And Apple Compete
+                                                                        For Clinical Trial Supremacy</a></li>
+                                                                <li><a href='https://www.mdconnectinc.com/medical-marketing-insights/beginners-guide-ppc-clinical-trials'
+                                                                        target='_blank'>A Beginner’s Guide to PPC for
+                                                                        Clinical Trials</a></li>
+
+                                                                <li><a href='https://www.healio.com/internal-medicine/practice-management/news/online/%7B33af5dc4-0047-4a29-9f8e-06914a328e26%7D/google-translate-accurately-translates-clinical-trial-data'
+                                                                                target='_blank'>Google Translate
+                                                                                accurately translates clinical trial
+                                                                                data </a></li>
+
+
                                                                 <li><a href='https://www.phillymarketinglabs.com/blog/understanding-adwords-disapprovals-in-the-pharmaceutical-industry-pharma/'
-                                                                                target='_blank'>Understanding AdWords
-                                                                                Disapprovals in the Pharmaceutical
-                                                                                Industry (Pharma)</a></li>
+                                                                        target='_blank'>Understanding AdWords
+                                                                        Disapprovals in the Pharmaceutical
+                                                                        Industry (Pharma)</a></li>
                                                         </ul>
                                                 </td>
                                         </tr>
-                                        <tr>
-                                                <td style="text-align: left; width: 166px;"><a
-                                                                href="https://www.healthmatchapp.com/"
-                                                                target="_blank">Healthmatchapp</a></td>
-                                                <td style="width: 816px;">Healthmatch is a startup from Australia that
-                                                        has devloped an app
-                                                        designed for patient use, that matches them with clinical trials
-                                                        based on their responses
-                                                        to machine-generated questions.
-                                                        <ul>
-                                                                <li><a href='http://www.startupdaily.net/2017/07/healthmatch-match-patients-clinical-trials-app/'
-                                                                                target='_blank'>Sydney startup
-                                                                                HealthMatch aims to match patients to
-                                                                                clinical
-                                                                                trials through a mobile app</a></li>
-                                                                <li><a href='https://www.ideaspies.com/an-easier-way-to-access-clinical-trials/'
-                                                                                target='_blank'>An
-                                                                                easier way to access clinical trials</a>
-                                                                </li>
-                                                        </ul>
-                                                </td>
-                                        </tr>
+
                                         <tr>
                                                 <td style="text-align: left; width: 166px;"><a
                                                                 href="https://www.ibm.com/watson/health/life-sciences/"
@@ -552,9 +257,7 @@
                                                         features that are applicable
                                                         to different phases of a clinical trial.
                                                         <ul>
-                                                                <li><a href='https://content.mkt.watson-health.ibm.com/event-2018-demo.html?S_PKG=AW&cm_mmc=Search_Google-_-Watson+Health_Watson+Health-_-WW_US-_-+clinicians++research_Broad_AW&cm_mmca1=000031BA&cm_mmca2=10007375&cm_mmca7=9007451&cm_mmca8=kwd-449332477402&cm_mmca9=bf44fcf4-c652-46a6-ba95-6cc50a90edb6&cm_mmca10=268491517665&cm_mmca11=b&mkwid=bf44fcf4-c652-46a6-ba95-6cc50a90edb6|711|38254&cvosrc=ppc.google.%2Bclinicians%20%2Bresearch&cvo_campaign=000031BA&cvo_crid=268491517665&Matchtype=b&gclid=Cj0KCQjw0a7YBRDnARIsAJgsF3MK5p2fm1nxRLeNmxAv9HheEakpT12t3wYBpoUSNUclvoMbKioevWEaApA7EALw_wcB'
-                                                                                target='_blank'>Request to Connect with
-                                                                                an IBM Watson Health expert</a></li>
+                                                               
                                                                 <li><a href='http://analytics-magazine.org/mayo-clinic-ibms-watson-tackle-clinical-trial-research/'
                                                                                 target='_blank'>Mayo Clinic, IBM's
                                                                                 Watson tackle clinical trial
@@ -570,7 +273,8 @@
                                         </tr>
                                         <tr>
                                                 <td style="text-align: left; width: 166px;"><a
-                                                                href="https://www.iqvia.com/" target="_blank">Iqvia</a>
+                                                                href="https://www.iqvia.com/solutions/technologies"
+                                                                target="_blank">Iqvia</a>
                                                 </td>
                                                 <td style="width: 816px;">By merging, IMS and Quintiles combined
                                                         expertise sets in datascience
@@ -638,14 +342,18 @@
                                         </tr>
                                         <tr>
                                                 <td style="text-align: left; width: 166px;"><a
-                                                                href="http://www.oracle.com/us/products/applications/health-sciences/e-clinical/clinical/index.html"
+                                                                href="https://www.oracle.com/industries/life-sciences/"
                                                                 target="_blank">Oracle</a></td>
-                                                <td style="width: 816px;">No longer the sharp new kid on the block,
+                                                <td style="width: 816px;">
                                                         Oracle can be considered a
                                                         workhorse in some ways, powering many processes in the
-                                                        background. Its "Oracle Clinical"
-                                                        focuses on applications for clinical researchers.
+                                                        background, and like many others is venturing into the cloud computing arena.  It would be interesting to see if Oracle can leverage its legacy to become a major data aggregator for clinical development, as trials transition more and more to newer forms of data.
                                                         <ul>
+
+                                                            <li><a href='https://www.oracle.com/partners/en/products/applications/clinical-remote-data-capture/overview/index.html?bcid=5128723616001'
+                                                                    target='_blank'>Short video about Oracle Health
+                                                                    Sciences</a></li>
+
                                                                 <li><a href='https://www.youtube.com/watch?v=XG9slOAP4ys'
                                                                                 target='_blank'>Oracle
                                                                                 Clinical youtube presentation</a></li>
@@ -710,7 +418,7 @@
                                                         other organizations, and develops frameworks and systems to
                                                         address needs in clinical
                                                         research. It provides templates and tools on its website listed
-                                                        as "initiative assets".
+                                                        as "Initiative Assets" (about half-way down the website linked to on the left).
                                                         <ul>
                                                                 <li><a href='https://www.businesswire.com/news/home/20180514005576/en/TransCelerate-Launches-New-Initiatives-Automation-Analytics-Data'
                                                                                 target='_blank'>TransCelerate Launches
@@ -732,7 +440,7 @@
                                                 <td style="text-align: left; width: 166px;"><a
                                                                 href="https://www.trinetx.com/"
                                                                 target="_blank">Trinetx</a></td>
-                                                <td style="width: 816px;">Less than 5 years ago, Trinetx started as a
+                                                <td style="width: 816px;">Less than 10 years ago, Trinetx started as a
                                                         venture fund organization
                                                         that, using proprietary technology that interacted with medical
                                                         records, specialized in
@@ -780,18 +488,26 @@
                                                 <td style="text-align: left; width: 166px;"><a
                                                                 href="https://www.vivosense.com/"
                                                                 target="_blank">Vivosense</a></td>
-                                                <td style="width: 816px;">Vivosense is a small organization that
+                                                <td style="width: 816px;">Vivosense (previously known as Vivonoetics) is a small organization that
                                                         specializes in algorithms that
                                                         analyze the new types of data available from wearables and
-                                                        sensors.
+                                                        sensors. A nice feature of their website is that it provides
+                                                        some information on specific <a
+                                                            href="https://www.vivosense.com/case-studies/">case
+                                                            studies</a>.
                                                         <ul>
+
+                                                            <li><a href='https://www.prweb.com/releases/actigraph_partners_with_vivosense_to_enhance_secure_access_to_regulated_sensor_data_from_patients_in_pharmaceutical_clinical_trials/prweb16325513.htm'
+                                                                    target='_blank'>ActiGraph Partners with VivoSense to
+                                                                    Enhance Secure Access to Regulated Sensor Data from
+                                                                    Patients in Pharmaceutical Clinical Trials</a></li>
+
                                                                 <li><a href='https://www.youtube.com/watch?v=UWKTa77T70M'
                                                                                 target='_blank'>Getting
                                                                                 Started with VivoSense</a></li>
                                                                 <li><a href='https://www.prnewswire.com/news-releases/roche-selects-vivonoetics-to-provide-advanced-respiratory-assessment-for-the-firefish-phase-ii-multicenter-clinical-trial-in-infants-with-spinal-muscular-atrophy-type-1-300395790.html'
                                                                                 target='_blank'>Roche selects
-                                                                                Vivonoetics to provide advanced
-                                                                                respiratory
+                                                                                Vivonoetics to provide advanced respiratory
                                                                                 assessment</a></li>
                                                         </ul>
                                                 </td>
@@ -800,199 +516,9 @@
                         </table>
 
 
+                        <p>Questions/Comments -- Please email SAhmedMD@gmail.com</p>
 
-
-                </div>
-
-                <br><br>
-        </div>
-        </div>
-        <br><br>
-
-        <hr style="background: black; width: 70%;">
-        <br> <br>
-
-        <!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx  Books  xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->
-
-
-        <!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx  ELSI  xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->
-
-
-        <div class='center'><button onclick="toggle('j10')" class='content w3-hover-text-green'>Ethical, Legal and
-                        Social
-                        Implications (ELSI)</button><br>
-                <div class="contentdiv" id="j10" style="border: 3px solid gray; ">
-
-
-                        <p>Below are a few resources that cover this topic, arranged starting with the more general
-                                aspects, then
-                                moving to specific. It is not intended to be comprehensive; this is
-                                becoming a specialized field, which is briskly
-                                evolving. </p>
-
-                        <ul>
-
-
-                                <li><a href='https://intelligence.org/files/EthicsofAI.pdf' target='_blank'>The Ethics
-                                                of Artificial
-                                                Intelligence</a></li>
-                                <li><a href="http://www.sienna-project.eu/robotics/elsi/" target='_blank'>Sienna
-                                                Project</a>: An effort coordinated by University of Twente in
-                                        Netherlands </li>
-                                <li><a href='https://arxiv.org/pdf/1701.07769.pdf' target='_blank'>Ethical
-                                                Considerations in Artificial
-                                                Intelligence Courses</a></li>
-                                <li><a href='https://www.weforum.org/agenda/2018/01/how-to-manage-ais-risks-and-benefits'
-                                                target='_blank'>How
-                                                to manage AI's risks and rewards</a></li>
-                                <li><a href='https://www.wired.com/story/ai-algorithms-need-drug-trials/'
-                                                                                                target='_blank'>AI
-                                                                                                Algorithms Need
-                                                                                                FDA-Style
-                                                                                                Drug Trials</a></li>
-                                <li><a href='https://ec.europa.eu/commission/priorities/justice-and-fundamental-rights/data-protection/2018-reform-eu-data-protection-rules_en'
-                                                target='_blank'>2018 reform of EU data protection rules</a></li>
-                                <li><a href='https://www.youtube.com/watch?v=OrLJ1rj8ZTY' target='_blank'>Is Your
-                                                Website GDPR Ready?
-                                                Follow this 7-step Checklist</a></li>
-                                <li><a href='https://goo.gl/jhVq1H' target='_blank'>ELSI of big data in health care
-                                                (clicking this will
-                                                download a presentation pdf by Effy Vayena, Univ of Zurich)</a></li>
-                                <li><a href='https://www.epmmagazine.com/opinion/new-big-data-rules-threaten-effective-drug-development/'
-                                                target='_blank'>New big data rules threaten effective drug
-                                                development</a></li>
-                                <li><a href='http://medicalfuturist.com/no-precision-medicine-without-artificial-intelligence/'
-                                                target='_blank'>There
-                                                Is No Precision Medicine Without Artificial Intelligence</a></li>
-                                <li><a href='https://med.stanford.edu/news/all-news/2018/03/researchers-say-use-of-ai-in-medicine-raises-ethical-questions.html'
-                                                target='_blank'>
-                                                Researchers say use of artificial intelligence in medicine raises
-                                                ethical questions</a></li>
-                        </ul>
-
-
-                        <br><br>
-                </div>
-
-        </div>
-        <br><br>
-
-        <hr style="background: black; width: 70%;">
-        <br> <br>
-
-        <!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx  Books  xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->
-
-
-        <div class='center'><button onclick="toggle('j11')" class='content w3-hover-text-green'>Books</button><br>
-                <div class="contentdiv" id="j11" style="border: 3px solid gray; ">
-
-
-                        <p>These books cover some general topics that go beyond what we did in our workshop. All the
-                                subjects
-                                addressed by these books are progressing rapidly, so it is likely that the books are now
-                                out of date,
-                                particularly with regard to details. They may
-                                still provide some insights, and some views of longer-term perspectives.
-
-                                <ul>
-                                        <li><a href='https://amzn.to/2JtOR9w' target='_blank'>Artificial Intelligence
-                                                        For Dummies , by John
-                                                        Mueller, Luca Massaron </a></li>
-                                        <li><a href='https://amzn.to/2sJNetZ' target='_blank'>Everybody Lies: Big Data,
-                                                        New Data, and What
-                                                        the Internet Can Tell Us About Who We Really Are, by Seth
-                                                        Stephens-Davidowitz </a></li>
-                                        <li><a href='https://amzn.to/2Hnyl5L' target='_blank'>From Science 2.0 to Pharma
-                                                        3.0: Semantic
-                                                        Search and Social Media in the Pharmaceutical industry and STM
-                                                        Publishing , by Herve Basset
-                                                </a></li>
-                                        <li><a href='https://amzn.to/2LnkFu8' target='_blank'>Machine Learning for
-                                                        Absolute Beginners: A
-                                                        Plain English Introduction, by Oliver Theobald </a></li>
-                                        <li><a href='https://amzn.to/2Jw5UYA' target='_blank'>Make Your Own Neural
-                                                        Network: An In-depth
-                                                        Visual Introduction For Beginners, by Michael Taylor </a></li>
-                                        <li><a href='https://amzn.to/2JxZzf4' target='_blank'>The Big Unlock: Harnessing
-                                                        Data and Growing
-                                                        Digital Health Businesses in a Value-Based Care Era, by Paddy
-                                                        Padmanabhan, Edward W. Marx
-                                                </a></li>
-                                        <li><a href='https://amzn.to/2Lq46gX' target='_blank'>The Math of Neural
-                                                        Networks, by Michael
-                                                        Taylor </a></li>
-                                        <li><a href='https://amzn.to/2M33TkR' target='_blank'>The Posthuman, by Rosi
-                                                        Braidotti </a></li>
-                                        <li><a href='https://amzn.to/2Hl1azH' target='_blank'>Weapons of Math
-                                                        Destruction: How Big Data
-                                                        Increases Inequality and Threatens Democracy, by Cathy O'Neil
-                                                </a></li>
-                                        <li><a href='https://amzn.to/2Lpkka1' target='_blank'>Re-Engineering Clinical
-                                                        Trials: Best
-                                                        Practices for Streamlining the Development Process, by Peter
-                                                        Schueler (Editor), Brendan
-                                                        Buckley (Editor)</a></li>
-
-                                </ul>
-                                <br><br>
-                </div>
-
-        </div>
-        <br><br>
-
-        <hr style="background: black; width: 70%;">
-
-
-        <!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx Google forms  xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->
-        <div class="center">
-
-                <form action="https://goo.gl/forms/MvEVinQiMpZhdS282" method="get" target="_blank">
-                        <br><br><button type="submit" class="surveyB w3-hover-text-green">Q1</button><br><br><br>
-                </form>
-        </div>
-        <!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx End Google forms xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->
-       <hr style="background: black; width: 70%;">
-        <!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx PPT  xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->
-
-        <div class='center'><br>
-                <img src="https://goo.gl/T777oY" alt="ppt object" width="60" height="60" class="w3-hover-text-green"
-                        onclick="toggle('j20')"> </a><br><br>
-
-                <div class="contentdiv" id="j20" style="border: 3px solid gray; ">
-                        <!--<iframe src='https://onedrive.live.com/embed?resid=6EDD77B683E1BF06%2113699&authkey=%21APQO_VpMIkiRhzw&em=2&wdAr=1.7777777777777777' width='800' height='500' frameborder='0'>-->
-                        <!--      This is an embedded <a target='_blank' href='https://office.com'>Microsoft Office</a> presentation, powered by <a target='_blank' href='https://office.com/webapps'>Office Online</a>.</iframe>-->
-
-                        <iframe src="https://onedrive.live.com/embed?cid=6EDD77B683E1BF06&resid=6EDD77B683E1BF06%2113749&authkey=AHgcCmfGRbKpgkI&em=2"
-                                width="800" height="500" frameborder="0"></iframe>
-                </div>
-                <hr>
-        </div>
-
-        <!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx CONTACT INFO  xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->
-        <br><br><br>
-        <div style="padding-left: 30%">
-                Email:
-                <a href="mailto:SAhmedMD@gmail.com" target="_top" class="w3-hover-text-green">SAhmedMD@gmail.com
-                </a>&nbsp;&nbsp;
-
-        </div>
-
-
-
-
-
-        <script>
-                function toggle(class_id) {
-                        var x = document.getElementById(class_id);
-                        if (x.style.display === 'block') {
-                                x.style.display = "none"
-                        } else {
-                                x.style.display = 'block'
-                        }
-                }
-        </script>
-
+</div>
 
 </body>
-
 </html>
